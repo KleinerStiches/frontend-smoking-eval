@@ -1,0 +1,35 @@
+Rauchen
+
+Frage
+1.1	Geburtsdatum	Jahren
+1.2	Geschlecht	m, w, o
+1.3	Name
+1.4	Vorname
+1.5	FID
+			Zu Frage:
+3	Sind Sie aktuell Raucher	Ja	4
+		Nein	100
+4	Rauchen Sie Zigaretten	Ja	5
+		Nein	50
+5	Wie viel rauchen Sie aktuell im Durchschnitt	Zigaretten/Tag	6
+6	Wie alt waren Sie als Sie mit Rauchen angefangen haben	Jahre 	7
+7	Im Durchschnitt, wie viel haben Sie geraucht	Päckli/Jahr	Fertig
+
+50	Was rauchen Sie alternativ	Pfeife/Zigarre/E-Zigarette/Anderes	51
+51	Wie häufig rauchen Sie	Täglich/Wöchentlich/Monatlich	52
+52	Wie alt waren Sie als Sie mit Rauchen angefangen haben	Jahre	53
+53	Haben Sie früher Zigaretten geraucht	Ja 	101
+		Nein	200
+
+100	Haben Sie früher geraucht	Ja	101
+		Nein	200
+
+101	Wie lange haben Sie geraucht	Jahre	102
+102	Wie viel haben Sie im Durchschnitt geraucht	Päckli/Tag	103
+103	Vor wie vielen "Zeitraum" haben Sie aufgehört	Woche/Monate/Jahre	200
+
+200	Sind Sie Passivraucher	Ja	201
+		Nein	Fertig
+201	Wie häufig	Täglich	Fertig
+		Wöchentlich	Fertig
+		Weniger als 1x pro Woche	Fertig

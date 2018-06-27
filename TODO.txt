@@ -1,0 +1,24 @@
+
+@TODO
+home handler and html
+with only one button
+"Datenaufnahme Beginnen"
+-> appcontext auf "/" auf home zeigen lassen
+-> nice stylen
+
+@TODO
+style des headers
+orientiern an
+https://readthedocs.org
+
+footer eventuell auch
+
+
+@TODO
+falls alles funktioniert mache in register.html dropdown anstatt text als input
+für Gescheht
+
+
+@TODO
+Päckli/Jahr ist eine ziemlich miese Frage
+besser päckli pro woche und dann auf 52 hochrechnen

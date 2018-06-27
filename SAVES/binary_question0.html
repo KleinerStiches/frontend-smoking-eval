@@ -1,0 +1,78 @@
+{% module Header() %}
+
+    <div class="container-fluid">
+      <form
+        id="question-binary-form"
+        class="m-5 p-5 border border-primary rounded bg-light"
+        action="question-binary"
+        method="post">
+
+        <div class="d-none">
+          <input
+            type="text"
+            name="question_code"
+            value="{{ escape(question_code) }}">
+          </input>
+        </div>
+
+
+        <div class="d-none">
+          <input
+            type="text"
+            name="next_yes"
+            value="{{ escape(next_yes) }}">
+          </input>
+        </div>
+
+
+        <div class="d-none">
+          <input
+            type="text"
+            name="next_no"
+            value="{{ escape(next_no) }}">
+          </input>
+        </div>
+
+
+        <h3 class="mb-2">{{ escape(question) }}</h3>
+
+        <input
+          class="btn btn-outline-dark mb-2"
+          type="submit"
+          name="answer"
+          value="Ja">
+        </input>
+
+        <input
+          class="btn btn-outline-dark mb-2"
+          type="submit"
+          name="answer"
+          value="Nein">
+        </input>
+
+        <!--
+        <a class="btn btn-outline-primary" href="{{ escape(next_yes) }}">Ja</a>
+        <a class="btn btn-outline-primary" href="{{ escape(next_no) }}">Nein</a>
+        -->
+        <!--
+        <input
+          class="btn btn-outline-dark mb-2 question-binary-submit"
+          type="submit"
+          name="button"
+          value="Ja"
+          onclick="submit_question({{ escape(next_yes) }}, 1)">
+        </input>
+
+        <input
+          class="btn btn-outline-dark mb-2"
+          type="submit"
+          name="button"
+          value="Nein"
+          onclick="submit_question({{ escape(next_no) }}, 0)">
+        </input>
+        -->
+
+      </form>
+    </div><!-- container-fluid -->
+
+{% module Footer() %}

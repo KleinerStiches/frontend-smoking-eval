@@ -1,0 +1,29 @@
+{% module Header() %}
+
+    <div class="container-fluid">
+      <form
+        class="m-5 p-5 border border-primary rounded bg-light"
+        action="question-binary"
+        method="post">
+        
+        <h3 class="mb-2">{{ escape(question) }}</h3>
+        <a class="btn btn-outline-primary" href="{{ escape(next_yes) }}">Ja</a>
+        <a class="btn btn-outline-primary" href="{{ escape(next_no) }}">Nein</a>
+        <!--
+        <input
+          class="btn btn-outline-dark mb-2"
+          type="submit"
+          name="button"
+          value="Ja">
+        </input>
+        <input
+          class="btn btn-outline-dark mb-2"
+          type="submit"
+          name="button"
+          value="Nein">
+        </input>
+        -->
+      </form>
+    </div><!-- container-fluid -->
+
+{% module Footer() %}

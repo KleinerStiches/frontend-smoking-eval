@@ -1,0 +1,62 @@
+.issue-manager-panel{
+  align-items: center;
+  align-self: center;
+}
+
+.issue-manager-input{
+  display: block;
+}
+
+.issue-manager-input-pw{
+
+}
+
+.issue-manager-label{
+  min-width: 300px;
+}
+
+.issue-manager-button{
+  margin-top: 10px;
+}
+
+.issue-manager-login-main-panel{
+  display: block;
+  width: 100%;
+  min-width: 512px;
+
+}
+
+.panel-right{
+  float: right;
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.panel-right-separator{
+  border-right: solid grey 1px;
+}
+
+.vertical-delimiter{
+  float: right;
+  display: block;
+  border-right: solid grey 1px;
+  margin: 1% auto;
+  width: 1px;
+  height: 100px;
+}
+
+.horizontal-delimiter{
+  border-right: solid grey 2px;
+  margin: auto 1%;
+  height: 2%;
+}
+
+
+.panel-left{
+  float: left;
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 2%;
+  padding-right: 3%;
+}

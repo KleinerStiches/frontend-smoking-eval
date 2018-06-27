@@ -1,0 +1,44 @@
+{% module Header() %}
+
+  <form
+    action="question-options"
+    method="post">
+
+    <div class="d-none">
+      <input
+        type="text"
+        name="redirect_next"
+        value="{{ escape(redirect_next) }}">
+      </input>
+    </div>
+
+    <div class="d-none">
+      <input
+        type="text"
+        name="question_code"
+        value="{{ escape(question_code) }}">
+      </input>
+    </div>
+
+    <h3 class="mb-2">{{ escape(question) }}</h3>
+
+    <div class="mb-2 radio-container">
+      {% for option in options %}
+      <input
+        type="radio"
+        name="answer"
+        value="{{ escape(option) }}"
+        checked> {{ escape(option) }}<br>
+      {% end %}
+    </div>
+
+    <input
+      class="btn btn-outline-primary mb-2"
+      type="submit"
+      name="button"
+      value="Weiter">
+    </input>
+
+  </form>
+
+{% module Footer() %}
