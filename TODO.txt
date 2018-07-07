@@ -1,24 +1,57 @@
+immer auf der Frage auf der man gerade ist links im summary markieren
+---
+hat eine kleine tücke weil man immer die bereits nächste frage noch ohne
+antwort im summary anzeigen muss
 
 @TODO
-home handler and html
-with only one button
-"Datenaufnahme Beginnen"
--> appcontext auf "/" auf home zeigen lassen
--> nice stylen
+@reviewed with doctors
+summary on the left of all the answers and the answered questions
+---
+think about adding the question type to the form-content dictionary
+@TODO better write a module in there make a verifcation if the questions
+has next_yes, options or placeholder attribute and if so map the correct url
+like question-options?code=...
+---
+this could also be useful in a later term when the advanced form is created
+since only questions from type binary lead to a new form full of questions
 
 @TODO
-style des headers
-orientiern an
-https://readthedocs.org
+@reviewed with doctors
+a site for pros
+where only binary questions are displayed solo
+after that the full branch with input and options question is displayed
+in a single container form
 
-footer eventuell auch
+### not necessary todos but for presentation in teh clinic would be nice
+
+@TODO
+implement a config file where a service can read the current state of
+the active theme
+----
+have a look at how it s done by the ervice that reads and writes from the questionaries.json
+
+eventually use a base handler for this
+
+in the rpepare method or womewhere there figure out which state is active
 
 
 @TODO
-falls alles funktioniert mache in register.html dropdown anstatt text als input
-für Gescheht
+make a simple json file with questions to the stomach pain protocol
+something small but try to read in a bit on wiki -> so it looks quite
+realistic
 
 
 @TODO
-Päckli/Jahr ist eine ziemlich miese Frage
-besser päckli pro woche und dann auf 52 hochrechnen
+prepare a simple insert of a question
+and a asimple remove of a question
+so can show that this is easy to handle
+----
+the questions might be handled quite similar to a list
+since when inserting a new question or when remov one the direct naibors (next
+and previous) of the inserted or removed question need to be relinked
+
+
+@TODO
+make the slides animated in and out
+---
+evetnually just skip this since the original idea was to keep it simple

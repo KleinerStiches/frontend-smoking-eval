@@ -1,43 +1,52 @@
 {% module Header() %}
+  <div class="row">
+  {% module Summary(summary) %}
 
-  <form
-    action="question-input"
-    method="post">
+    <div class="col-9">
+      <div class="row justify-content-center">
+        <div class="col-9 m-5 p-5 border border-primary rounded bg-light">
+          <form
+            action="question-input"
+            method="post">
 
-    <div class="d-none">
-      <input
-        type="text"
-        name="redirect_next"
-        value="{{ escape(redirect_next) }}">
-      </input>
-    </div>
+            <div class="d-none">
+              <input
+                type="text"
+                name="redirect_next"
+                value="{{ escape(redirect_next) }}">
+              </input>
+            </div>
 
-    <div class="d-none">
-      <input
-        type="text"
-        name="question_code"
-        value="{{ escape(question_code) }}">
-      </input>
-    </div>
+            <div class="d-none">
+              <input
+                type="text"
+                name="question_code"
+                value="{{ escape(question_code) }}">
+              </input>
+            </div>
 
-    <h3 class="mb-2">{{ escape(question) }}</h3>
+            <h3 class="mb-2">{{ escape(question) }}</h3>
 
-    <div class="input-group mb-2">
-      <input
-        class="form-control"
-        type="text"
-        placeholder="{{ escape(input_placeholder) }}"
-        name="answer">
-      </input>
-    </div>
+            <div class="input-group mb-2">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="{{ escape(input_placeholder) }}"
+                name="answer">
+              </input>
+            </div>
 
-    <input
-      class="btn btn-outline-primary mb-2"
-      type="submit"
-      name="button"
-      value="Weiter">
-    </input>
+            <input
+              class="btn btn-outline-primary mb-2"
+              type="submit"
+              name="button"
+              value="Weiter">
+            </input>
 
-  </form>
+          </form>
+        </div>
+      </div>
+    </div><!-- col-9 -->
+  </div><!-- row -->
 
 {% module Footer() %}

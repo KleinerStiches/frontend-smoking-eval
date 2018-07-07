@@ -1,0 +1,17 @@
+
+<div class="col-3">
+  <h4 class="m-2 mt-3">Beantwortete Fragen</h4>
+
+  <ul class="m-2 list-group">
+    {% for clue in summary %}
+      <li class="list-group-item">
+        <a
+          class=""
+          href="/{{ escape(clue['question_url']) }}{{ escape(clue['code']) }}">
+          {{ escape(clue["question"]) }}
+        </a>
+        <span class="d-block">{{ escape(clue["answer"]) }}</span>
+      </li>
+    {% end %}
+  </ul>
+</div>

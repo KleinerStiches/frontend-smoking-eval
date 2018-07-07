@@ -1,49 +1,58 @@
 {% module Header() %}
+  <div class="row">
+  {% module Summary(summary) %}
 
-  <form
-    action="question-binary"
-    method="post">
+    <div class="col-9">
+      <div class="row justify-content-center">
+        <div class="col-9 m-5 p-5 border border-primary rounded bg-light">
+          <form
+            action="question-binary"
+            method="post">
 
-    <div class="d-none">
-      <input
-        type="text"
-        name="question_code"
-        value="{{ escape(question_code) }}">
-      </input>
-    </div>
+            <div class="d-none">
+              <input
+                type="text"
+                name="question_code"
+                value="{{ escape(question_code) }}">
+              </input>
+            </div>
 
-    <div class="d-none">
-      <input
-        type="text"
-        name="next_yes"
-        value="{{ escape(next_yes) }}">
-      </input>
-    </div>
+            <div class="d-none">
+              <input
+                type="text"
+                name="next_yes"
+                value="{{ escape(next_yes) }}">
+              </input>
+            </div>
 
-    <div class="d-none">
-      <input
-        type="text"
-        name="next_no"
-        value="{{ escape(next_no) }}">
-      </input>
-    </div>
+            <div class="d-none">
+              <input
+                type="text"
+                name="next_no"
+                value="{{ escape(next_no) }}">
+              </input>
+            </div>
 
-    <h3 class="mb-2">{{ escape(question) }}</h3>
+            <h3 class="mb-2">{{ escape(question) }}</h3>
 
-    <input
-      class="btn btn-outline-primary mb-2"
-      type="submit"
-      name="answer"
-      value="Ja">
-    </input>
+            <input
+              class="btn btn-outline-primary mb-2"
+              type="submit"
+              name="answer"
+              value="Ja">
+            </input>
 
-    <input
-      class="btn btn-outline-primary mb-2"
-      type="submit"
-      name="answer"
-      value="Nein">
-    </input>
+            <input
+              class="btn btn-outline-primary mb-2"
+              type="submit"
+              name="answer"
+              value="Nein">
+            </input>
 
-  </form>
+          </form>
+        </div>
+      </div>
+    </div><!-- col-9 -->
+  </div><!-- row -->
 
 {% module Footer() %}

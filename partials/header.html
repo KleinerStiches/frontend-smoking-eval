@@ -25,19 +25,47 @@
   <body>
 
     <header class="sticky-top">
-      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand text-white-50" href="#">
-          <!-- <img src="media/icons/insel_icon.png"
-                    width="30"
-                    height="30"
-                    class="d-inline-block align-top"
-                    alt="Issue Manager"></img> -->
+      <nav
+        class="navbar navbar-expand-lg navbar-light justify-content-between bg-primary">
+        <a class="navbar-brand text-white-50" href="/home">
           Raucher Evaluation
+          <!--
+          <img
+            src={{ static_url("media/imgs/header_smoke.png") }}
+            width="200"
+            height="30"
+            class="d-inline-block align-center"
+            alt="header_smoke">
+          </img>
+          -->
         </a>
+        <!--
+        <div>
+          <a class="nav-link dropdown-toggle text-white-50"
+            id="switch-theme"
+            aria-haspopup="true"
+            aria-expanded="false"
+            data-toggle="dropdown">
+            Theme
+          </a>
+          <div class="dropdown-menu" aria-labelledby="switch-theme">
+            <a class="dropdown-item" href="#">Hell</a>
+            <a class="dropdown-item" href="#">Dunkel</a>
+          </div>
         </div>
+        -->
+
+        <a>
+          <img
+            id="switch-theme"
+            class="m-1 border border-secondary rounded"
+            src="{{ static_url("media/icons/theme_icon.png") }}"
+            alt="smoke-img"
+            width="20"
+            height="20">
+          </img>
+        </a>
       </nav>
     </header>
 
     <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-6 m-5 p-5 border border-primary rounded bg-light">
