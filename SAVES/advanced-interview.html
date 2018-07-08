@@ -1,0 +1,60 @@
+{% module Header() %}
+  <div class="row justify-content-center">
+    <div class="col-9 m-5 p-5 border border-primary rounded bg-light">
+      <ul class="m-2 list-group">
+        {% for question in questions %}
+          <li class="list-group-item">
+            <span class="d-block">{{ escape(question['question']) }}</span>
+            {% if question['question_type'] == "question-binary" %}
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <input
+                  class="btn btn-outline-primary"
+                  type="button"
+                  name="answer"
+                  value="Ja">
+                </input>
+
+                <input
+                  class="btn btn-outline-primary"
+                  type="button"
+                  name="answer"
+                  value="Nein">
+                </input>
+              </div>
+            {% elif question['question_type'] == "question-input" %}
+              <div class="input-group mb-2">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="{{ escape(question['placeholder']) }}"
+                  name="answer">
+                </input>
+              </div>
+            {% elif question['question_type'] == "question-options" %}
+              <div class="mb-2 radio-container">
+                {% for option in question['options'] %}
+                <input
+                  type="radio"
+                  name="answer"
+                  value="{{ escape(option) }}"
+                  checked> {{ escape(option) }}<br>
+                {% end %}
+              </div>
+            {% else %}
+              <span>Question type not supported</span>
+            {% end %}
+          </li>
+        {% end %}
+      </ul>
+
+      <input
+        class="btn btn-outline-primary mb-2"
+        type="submit"
+        name="button"
+        value="Weiter">
+      </input>
+
+    </div><!-- col-9 -->
+  </div><!-- row -->
+
+{% module Footer() %}

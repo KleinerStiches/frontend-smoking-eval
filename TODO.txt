@@ -1,19 +1,12 @@
-immer auf der Frage auf der man gerade ist links im summary markieren
----
-hat eine kleine tücke weil man immer die bereits nächste frage noch ohne
-antwort im summary anzeigen muss
-
 @TODO
-@reviewed with doctors
-summary on the left of all the answers and the answered questions
+use a tree structure for the advanced view
+with the codes as base
+50 ->
+100 ->
+200 ->
 ---
-think about adding the question type to the form-content dictionary
-@TODO better write a module in there make a verifcation if the questions
-has next_yes, options or placeholder attribute and if so map the correct url
-like question-options?code=...
----
-this could also be useful in a later term when the advanced form is created
-since only questions from type binary lead to a new form full of questions
+use bootstrap 4 its collpase NOT JS if possible
+
 
 @TODO
 @reviewed with doctors
@@ -21,8 +14,38 @@ a site for pros
 where only binary questions are displayed solo
 after that the full branch with input and options question is displayed
 in a single container form
+---
+create advanced-view.html
+create advanced_view_controller.py
+add to application context
 
+@TODO
+add the currently asked question to the summary and mark the current one
+as active
+---
+what would be nice is to have kind of the left border is thcker and has the
+primary color the active one has another color and is outlined or somehting
+---
+*solution add the question as a separate param
+current_question = the question
+in the summary.html
+in the summary for loop
+if current_quest.code = clue.code
+  mark as active and write ... instead of answer
+
+@TODO
+update when clicked on a question in the summary the question with the answer
+that was once given by the user
+
+@TODO
+realtime verification in js for the input question
+
+
+
+
+###
 ### not necessary todos but for presentation in teh clinic would be nice
+###
 
 @TODO
 implement a config file where a service can read the current state of
