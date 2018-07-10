@@ -1,0 +1,175 @@
+{
+  "tree":{
+    "code": 3,
+    "type": "binary",
+    "next_yes": {
+      "code": "4",
+      "type": "binary",
+      "next_yes": {
+        "code": 5,
+        "next": {
+          "code": 6,
+          "next": {
+            "code": 7,
+            "next": {
+              "code": 0
+            }
+          }
+        }
+      },
+      "next_no": {
+        "code": 50,
+        "next": {
+          "code": 51,
+          "next": {
+            "code": 52,
+            "next": {
+              "code": 53,
+              "type": "binary",
+              "next_yes": {
+                "code": 101,
+                "next": {
+                  "code": 102,
+                  "next": {
+                    "code": 103,
+                    "next": {
+                      "code": 200,
+                      "type": "binary",
+                      "next_yes": {
+                        "code": 201,
+                        "next": 0
+                      },
+                      "next_no": 0
+                    }
+                  }
+                },
+              "next_no": {
+                "code": 200,
+                "type": "binary",
+                "next_yes": {
+                  "code": 201,
+                  "next": 0
+                },
+                "next_no": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "next_no": 100
+  }
+}
+
+
+{
+  "codes":
+  [
+    {
+      "code": "3",
+      "question": "Sind Sie aktuell Raucher?",
+      "next_yes": "/question-binary?code=4",
+      "next_no": "/question-binary?code=100"
+    },
+    {
+      "code": "4",
+      "question": "Rauchen Sie Zigaretten?",
+      "next_yes": "/question-input?code=5",
+      "next_no": "/question-options?code=50"
+    },
+    {
+      "code": "5",
+      "question": "Wie viel rauchen Sie aktuell im Durchschnitt?",
+      "placeholder": "Zigaretten/Tag",
+      "next": "/question-input?code=6"
+    },
+    {
+      "code": "6",
+      "question": "Wie alt waren Sie als Sie mit Rauchen angefangen haben?",
+      "placeholder": "Jahre",
+      "next": "/question-input?code=7"
+    },
+    {
+      "code": "7",
+      "question": "Im Durchschnitt, wie viel haben Sie geraucht?",
+      "placeholder": "Päckli/Jahr",
+      "next": "/acquisition"
+    },
+    {
+      "code": "50",
+      "question": "Was rauchen Sie alternativ?",
+      "options": [
+        "Pfeife",
+        "Zigarre",
+        "E-Zigarette"
+      ],
+      "next": "/question-options?code=51"
+    },
+    {
+      "code": "51",
+      "question": "Wie häufig rauchen Sie?",
+      "options": [
+        "Täglich",
+        "Wöchentlich",
+        "Monatlich"
+      ],
+      "next": "/question-input?code=52"
+    },
+    {
+      "code": "52",
+      "question": "Wie alt waren Sie als Sie mit Rauchen angefangen haben?",
+      "placeholder": "Jahre",
+      "next": "/question-binary?code=53"
+    },
+    {
+      "code": "53",
+      "question": "Haben Sie früher Zigaretten geraucht?",
+      "next_yes": "/question-input?code=101",
+      "next_no": "/question-binary?code=200"
+    },
+    {
+      "code": "100",
+      "question": "Haben Sie früher geraucht?",
+      "next_yes": "/question-input?code=101",
+      "next_no": "/question-binary?code=200"
+    },
+    {
+      "code": "101",
+      "question": "Wie lange haben Sie geraucht?",
+      "placeholder": "Jahre",
+      "next": "/question-input?code=102"
+    },
+    {
+      "code": "102",
+      "question": "Wie viel haben Sie im Durchschnitt geraucht?",
+      "placeholder": "Päckli/Tag",
+      "next": "/question-options?code=103"
+    },
+    {
+      "code": "103",
+      "question": "Vor wie vielen 'Zeitraum' haben Sie aufgehört?",
+      "options": [
+        "Woche",
+        "Monate",
+        "Jahre"
+      ],
+      "next": "/question-binary?code=200"
+    },
+    {
+      "code": "200",
+      "question": "Sind Sie Passivraucher?",
+      "next_yes": "/question-options?code=201",
+      "next_no": "/acquisition"
+    },
+    {
+      "code": "201",
+      "question": "Wie häufig?",
+      "options": [
+        "Täglich",
+        "Wöchentlich",
+        "Weniger als 1x pro Woche"
+      ],
+      "next": "/acquisition"
+    }
+  ]
+}

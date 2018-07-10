@@ -8,10 +8,10 @@
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </section>
 
-      <div class="mb-2">
+      <ul class="mb-2 list-group">
         {% for question in questions %}
           {% if question['question_type'] == "question-binary" %}
-            <div class="mb-2">
+            <li class="list-group-item">
               <h5 class="d-block" mb-2>
                 {{ escape(question['question']) }}
               </h5>
@@ -43,9 +43,10 @@
                     Nein
                   </input>
                 </label>
+
               </div>
 
-              <div class="m-2 collapse multi-collapse">
+              <ul class="m-2 list-group collapse multi-collapse">
                 {% for question in questions %}
                   {% if question['question_type'] == "question-input" %}
                     <div class="border border-top mb-2"></div>
@@ -72,11 +73,11 @@
                     </div>
                   {% end %} <!-- if elif -->
                 {% end %} <!-- for question in questions -->
-              </div>
-            </div>
+              </ul>
+            </li>
           {% end %} <!-- if question['question_type'] == "question-binary -->
         {% end %}<!-- for question in questions -->
-      </div>
+      </ul>
 
       <input
         class="btn btn-outline-primary mb-2"
