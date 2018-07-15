@@ -22,6 +22,8 @@
         </div><!-- col-9 -->
       </div><!-- row -->
 
+      <!-- TODO this could be done by REST controller
+      and ajax instead of loading into html -->
       {% import json %}
       <div id="content-container" class="d-none">
         {{ json.dumps(question_tree) }}
