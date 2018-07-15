@@ -1,5 +1,87 @@
 $(document).ready(function () {
 
+  var build_binary_question = function (question_node, question_node_next) {
+    $('#node-'+(question_node.code).toString())
+    .append("<div id='node-"+ question_node_next.code +"'>" +
+    "[" + question_node_next.code + "] " +
+    "<h5 class='d-block' mb-2>" + question_node_next.question +
+    `</h5>
+    <div
+      class='btn-group btn-group-toggle mb-2'
+      role='group'
+      aria-label='Basic example'
+      data-toggle='buttons'>
+
+      <label
+        class='btn btn-primary'
+        data-toggle='collapse'
+        data-target='.multi-collapse'
+        aria-expanded='false'>
+        <input
+          type='radio'
+          name='answer'
+          value='Ja'>
+          Ja
+        </input>
+      </label>
+
+      <label class='btn btn-primary'>
+        <input
+          type='radio'
+          name='answer'
+          value='Nein'
+          checked>
+          Nein
+        </input>
+      </label>
+    </div>`
+    +
+    "</div>");
+  }
+
+  var build_input_question = function(question_node, question_node_next){
+    $('#node-'+(question_node.code).toString())
+    .append("<div id='node-"+ question_node_next.code +"'>" +
+    "[" + question_node_next.code + "] " +
+    `<div class="border border-top mb-2"></div>
+    <h5 class="d-block">` +
+    question_node_next.question +
+    `</h5>
+    <div class="input-group mb-2">
+      <input
+        class="form-control"
+        type="text"
+        placeholder=` + question_node_next.placeholder + `
+        name="answer">
+      </input>
+    </div>
+    `
+    +
+    "</div>");
+  }
+
+  var build_options_question = function (question_node, question_node_next) {
+    $('#node-'+(question_node.code).toString())
+    .append("<div id='node-"+ question_node_next.code +"'>" +
+    "[" + question_node_next.code + "] " +
+    `
+    <div class="border border-top mb-2"></div>
+    <span class="d-block">` +
+    question_node_next.question +
+    `</span>
+    <div class="mb-2 radio-container">
+      {% for option in question['options'] %}
+      <input
+        type="radio"
+        name="answer"
+        value="{{ escape(option) }}"
+        checked> `+ "xyz" +`<br>
+      {% end %}
+    </div>`
+    +
+    "</div>");
+  }
+
   var expand_tree_rec = function (last_node){
     if (!last_node)
     {
@@ -14,87 +96,16 @@ $(document).ready(function () {
       }
       else if(last_node.next_yes.question_type === "question-binary")
       {
-        $('#node-'+(last_node.code).toString())
-        .append("<div id='node-"+ last_node.next_yes.code +"'>" +
-        "[" + last_node.next_yes.code + "] " +
-        "<h5 class='d-block' mb-2>" + last_node.next_yes.question +
-        `</h5>
-        <div
-          class='btn-group btn-group-toggle mb-2'
-          role='group'
-          aria-label='Basic example'
-          data-toggle='buttons'>
-
-          <label
-            class='btn btn-primary'
-            data-toggle='collapse'
-            data-target='.multi-collapse'
-            aria-expanded='false'>
-            <input
-              type='radio'
-              name='answer'
-              value='Ja'>
-              Ja
-            </input>
-          </label>
-
-          <label class='btn btn-primary'>
-            <input
-              type='radio'
-              name='answer'
-              value='Nein'
-              checked>
-              Nein
-            </input>
-          </label>
-        </div>`
-        +
-        "</div>");
+        build_binary_question(last_node, last_node.next_yes);
         expand_tree_rec(last_node.next_yes);
       }
       else if (last_node.next_yes.question_type === "question-input")
       {
-        $('#node-'+(last_node.code).toString())
-        .append("<div id='node-"+ last_node.next_yes.code +"'>" +
-        "[" + last_node.next_yes.code + "] " +
-        `<div class="border border-top mb-2"></div>
-        <h5 class="d-block">` +
-        last_node.next_yes.question +
-        `</h5>
-        <div class="input-group mb-2">
-          <input
-            class="form-control"
-            type="text"
-            placeholder=` + last_node.next_yes.placeholder + `
-            name="answer">
-          </input>
-        </div>
-        `
-        +
-        "</div>");
+        build_input_question(last_node, last_node.next_yes);
         expand_tree_rec(last_node.next_yes);
       }
       else if (last_node.next_yes.question_type === "question-options") {
-        $('#node-'+(last_node.code).toString())
-        .append("<div id='node-"+ last_node.next_yes.code +"'>" +
-        "[" + last_node.next_yes.code + "] " +
-        `
-        <div class="border border-top mb-2"></div>
-        <span class="d-block">` +
-        last_node.next_yes.question +
-        `</span>
-        <div class="mb-2 radio-container">
-          {% for option in question['options'] %}
-          <input
-            type="radio"
-            name="answer"
-            value="{{ escape(option) }}"
-            checked> `+ "xyz" +`<br>
-          {% end %}
-        </div>`
-        +
-        "</div>");
-        // TODO append all options to the radio-container
+        build_options_question(last_node, last_node.next_yes);
         expand_tree_rec(last_node.next_yes);
       }
       else {
@@ -109,87 +120,16 @@ $(document).ready(function () {
       }
       else if(last_node.next_no.question_type === "question-binary")
       {
-        $('#node-'+(last_node.code).toString())
-        .append("<div id='node-"+ last_node.next_no.code +"'>" +
-        "[" + last_node.next_no.code + "] " +
-        "<h5 class='d-block' mb-2>" + last_node.next_no.question +
-        `</h5>
-        <div
-          class='btn-group btn-group-toggle mb-2'
-          role='group'
-          aria-label='Basic example'
-          data-toggle='buttons'>
-
-          <label
-            class='btn btn-primary'
-            data-toggle='collapse'
-            data-target='.multi-collapse'
-            aria-expanded='false'>
-            <input
-              type='radio'
-              name='answer'
-              value='Ja'>
-              Ja
-            </input>
-          </label>
-
-          <label class='btn btn-primary'>
-            <input
-              type='radio'
-              name='answer'
-              value='Nein'
-              checked>
-              Nein
-            </input>
-          </label>
-        </div>`
-        +
-        "</div>");
+        build_binary_question(last_node, last_node.next_no);
         expand_tree_rec(last_node.next_no);
       }
       else if (last_node.next_no.question_type === "question-input")
       {
-        $('#node-'+(last_node.code).toString())
-        .append("<div id='node-"+ last_node.next_no.code +"'>" +
-        "[" + last_node.next_no.code + "] " +
-        `<div class="border border-top mb-2"></div>
-        <h5 class="d-block">` +
-        last_node.next_no.question +
-        `</h5>
-        <div class="input-group mb-2">
-          <input
-            class="form-control"
-            type="text"
-            placeholder=` + last_node.next_no.placeholder + `
-            name="answer">
-          </input>
-        </div>
-        `
-        +
-        "</div>");
+        build_input_question(last_node, last_node.next_no);
         expand_tree_rec(last_node.next_no);
       }
       else if (last_node.next_no.question_type === "question-options") {
-        $('#node-'+(last_node.code).toString())
-        .append("<div id='node-"+ last_node.next_no.code +"'>" +
-        "[" + last_node.next_no.code + "] " +
-        `
-        <div class="border border-top mb-2"></div>
-        <span class="d-block">` +
-        last_node.next_no.question +
-        `</span>
-        <div class="mb-2 radio-container">
-          {% for option in question['options'] %}
-          <input
-            type="radio"
-            name="answer"
-            value="{{ escape(option) }}"
-            checked> `+ "xyz" +`<br>
-          {% end %}
-        </div>`
-        +
-        "</div>");
-        // TODO append all options to the radio-container
+        build_options_question(last_node, last_node.next_no);
         expand_tree_rec(last_node.next_no);
       }
       else {
@@ -208,88 +148,17 @@ $(document).ready(function () {
       }
       else if(last_node.next.question_type === "question-binary")
       {
-        $('#node-'+(last_node.code).toString())
-        .append("<div id='node-"+ last_node.next.code +"'>" +
-        "[" + last_node.next.code + "] " +
-        "<h5 class='d-block' mb-2>" + last_node.next.question +
-        `</h5>
-        <div
-          class='btn-group btn-group-toggle mb-2'
-          role='group'
-          aria-label='Basic example'
-          data-toggle='buttons'>
-
-          <label
-            class='btn btn-primary'
-            data-toggle='collapse'
-            data-target='.multi-collapse'
-            aria-expanded='false'>
-            <input
-              type='radio'
-              name='answer'
-              value='Ja'>
-              Ja
-            </input>
-          </label>
-
-          <label class='btn btn-primary'>
-            <input
-              type='radio'
-              name='answer'
-              value='Nein'
-              checked>
-              Nein
-            </input>
-          </label>
-        </div>`
-        +
-        "</div>");
+        build_binary_question(last_node, last_node.next);
         expand_tree_rec(last_node.next);
       }
       else if(last_node.next.question_type === "question-input")
       {
-        $('#node-'+(last_node.code).toString())
-        .append("<div id='node-"+ last_node.next.code +"'>" +
-        "[" + last_node.next.code + "] " +
-        `<div class="border border-top mb-2"></div>
-        <h5 class="d-block">` +
-        last_node.next.question +
-        `</h5>
-        <div class="input-group mb-2">
-          <input
-            class="form-control"
-            type="text"
-            placeholder=` + last_node.next.placeholder + `
-            name="answer">
-          </input>
-        </div>
-        `
-        +
-        "</div>");
+        build_input_question(last_node, last_node.next);
         expand_tree_rec(last_node.next);
       }
       else if (last_node.next.question_type === "question-options")
       {
-        $('#node-'+(last_node.code).toString())
-        .append("<div id='node-"+ last_node.next.code +"'>" +
-        "[" + last_node.next.code + "] " +
-        `
-        <div class="border border-top mb-2"></div>
-        <span class="d-block">` +
-        last_node.next.question +
-        `</span>
-        <div class="mb-2 radio-container">
-          {% for option in question['options'] %}
-          <input
-            type="radio"
-            name="answer"
-            value="{{ escape(option) }}"
-            checked> `+ "xyz" +`<br>
-          {% end %}
-        </div>`
-        +
-        "</div>");
-        // TODO append all options to the radio-container
+        build_options_question(last_node, last_node.next);
         expand_tree_rec(last_node.next);
       }
       else
