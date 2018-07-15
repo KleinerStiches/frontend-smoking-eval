@@ -9,7 +9,7 @@
       </section>
 
       <div class="mb-2">
-        {% apply unfold_question_tree(question) %}
+        {% for question in questions %}
           {% if question['question_type'] == "question-binary" %}
             <div class="mb-2">
               <h5 class="d-block" mb-2>
@@ -45,45 +45,37 @@
                 </label>
               </div>
 
-              {% apply unfold_question_tree(question.get('next_yes')) %}
-              {% apply unfold_question_tree(question.get('next_no')) %}
-
               <div class="m-2 collapse multi-collapse">
-                {% if question['question_type'] == "question-input" %}
-                  <div class="border border-top mb-2"></div>
-                  <h5 class="d-block">{{ escape(question['question']) }}</h5>
-                  <div class="input-group mb-2">
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="{{ escape(question['placeholder']) }}"
-                      name="answer">
-                    </input>
-                  </div>
-                  {% apply unfold_question_tree(question.get('next')) %}
-
-                {% elif question['question_type'] == "question-options" %}
-                  <div class="border border-top mb-2"></div>
-                  <span class="d-block">{{ escape(question['question']) }}</span>
-                  <div class="mb-2 radio-container">
-                    {% for option in question['options'] %}
-                    <input
-                      type="radio"
-                      name="answer"
-                      value="{{ escape(option) }}"
-                      checked> {{ escape(option) }}<br>
-                    {% end %}
-                  </div>
-                  {% apply unfold_question_tree(question.get('next')) %}
-                {% end %} <!-- if elif -->
+                {% for question in questions %}
+                  {% if question['question_type'] == "question-input" %}
+                    <div class="border border-top mb-2"></div>
+                    <h5 class="d-block">{{ escape(question['question']) }}</h5>
+                    <div class="input-group mb-2">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="{{ escape(question['placeholder']) }}"
+                        name="answer">
+                      </input>
+                    </div>
+                  {% elif question['question_type'] == "question-options" %}
+                    <div class="border border-top mb-2"></div>
+                    <span class="d-block">{{ escape(question['question']) }}</span>
+                    <div class="mb-2 radio-container">
+                      {% for option in question['options'] %}
+                      <input
+                        type="radio"
+                        name="answer"
+                        value="{{ escape(option) }}"
+                        checked> {{ escape(option) }}<br>
+                      {% end %}
+                    </div>
+                  {% end %} <!-- if elif -->
+                {% end %} <!-- for question in questions -->
               </div>
             </div>
           {% end %} <!-- if question['question_type'] == "question-binary -->
         {% end %}<!-- for question in questions -->
-
-        <!-- TODO call unfold_question_tree after initialised -->
-        {% set starting_question = question_tree.get('start')  %}
-        {% unfold_question_tree(starting_question)  %}
       </div>
 
       <input

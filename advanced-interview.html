@@ -1,91 +1,44 @@
 {% module Header() %}
-  <div class="row justify-content-center">
-    <div class="col-9 m-5 p-5 border border-primary rounded bg-light">
+      <div class="row justify-content-center">
+        <div class="col-9 m-5 p-5 border border-primary rounded bg-light">
 
-      <section class="mb-2">
-        <h3>Formular Raucher Evaluation</h3>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </section>
+          <section class="mb-2">
+            <h3>Formular Raucher Evaluation</h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </section>
 
-      <div class="mb-2">
-        {% for question in questions %}
-          {% if question['question_type'] == "question-binary" %}
-            <div class="mb-2">
-              <h5 class="d-block" mb-2>
-                {{ escape(question['question']) }}
-              </h5>
-              <div
-                class="btn-group btn-group-toggle mb-2"
-                role="group"
-                aria-label="Basic example"
-                data-toggle="buttons">
+          <div id="node-root" class="mb-2">
 
-                <label
-                  class="btn btn-primary"
-                  data-toggle="collapse"
-                  data-target=".multi-collapse"
-                  aria-expanded="false">
-                  <input
-                    type="radio"
-                    name="answer"
-                    value="Ja">
-                    Ja
-                  </input>
-                </label>
+          </div>
 
-                <label class="btn btn-primary">
-                  <input
-                    type="radio"
-                    name="answer"
-                    value="Nein"
-                    checked>
-                    Nein
-                  </input>
-                </label>
-              </div>
+          <input
+            class="btn btn-outline-primary mb-2"
+            type="submit"
+            name="button"
+            value="Weiter">
+          </input>
 
-              <div class="m-2 collapse multi-collapse">
-                {% for question in questions %}
-                  {% if question['question_type'] == "question-input" %}
-                    <div class="border border-top mb-2"></div>
-                    <h5 class="d-block">{{ escape(question['question']) }}</h5>
-                    <div class="input-group mb-2">
-                      <input
-                        class="form-control"
-                        type="text"
-                        placeholder="{{ escape(question['placeholder']) }}"
-                        name="answer">
-                      </input>
-                    </div>
-                  {% elif question['question_type'] == "question-options" %}
-                    <div class="border border-top mb-2"></div>
-                    <span class="d-block">{{ escape(question['question']) }}</span>
-                    <div class="mb-2 radio-container">
-                      {% for option in question['options'] %}
-                      <input
-                        type="radio"
-                        name="answer"
-                        value="{{ escape(option) }}"
-                        checked> {{ escape(option) }}<br>
-                      {% end %}
-                    </div>
-                  {% end %} <!-- if elif -->
-                {% end %} <!-- for question in questions -->
-              </div>
-            </div>
-          {% end %} <!-- if question['question_type'] == "question-binary -->
-        {% end %}<!-- for question in questions -->
+        </div><!-- col-9 -->
+      </div><!-- row -->
+
+      {% import json %}
+      <div id="content-container" class="d-none">
+        {{ json.dumps(question_tree) }}
       </div>
 
-      <input
-        class="btn btn-outline-primary mb-2"
-        type="submit"
-        name="button"
-        value="Weiter">
-      </input>
+    <!-- footer -->
+    </div><!-- container-fluid -->
 
-    </div><!-- col-9 -->
-  </div><!-- row -->
-
-{% module Footer() %}
+    <footer>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ static_url("js/theme/switch-theme.js") }}"></script>
+    <script
+      type="text/javascript"
+      src="{{ static_url("js/advanced-view/unfold-tree.js") }}">
+    </script>
+  </body>
+</html>

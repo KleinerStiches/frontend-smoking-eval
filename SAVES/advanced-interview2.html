@@ -1,0 +1,32 @@
+{% module Header() %}
+  <div class="row justify-content-center">
+    <div class="col-9 m-5 p-5 border border-primary rounded bg-light">
+
+      <section class="mb-2">
+        <h3>Formular Raucher Evaluation</h3>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </section>
+
+      <div id="node-{{ escape(question_tree['root']['code']) }}" class="mb-2">
+
+      </div>
+
+      <input
+        class="btn btn-outline-primary mb-2"
+        type="submit"
+        name="button"
+        value="Weiter">
+      </input>
+
+    </div><!-- col-9 -->
+  </div><!-- row -->
+
+  <script type="text/javascript">
+    var question_tree = {{ escape(question_tree) }}
+  </script>
+  <script
+    type="text/javascript"
+    src="{{ static_url("js/advanced-view/unfold-tree.js") }}">
+  </script>
+{% module Footer() %}
