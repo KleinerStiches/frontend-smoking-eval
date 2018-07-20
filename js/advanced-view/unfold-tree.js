@@ -10,8 +10,8 @@ $(document).ready(function () {
     }
 
 
-    $('#node-'+(question_node.code).toString())
-    .append("<div id='node-"+ question_node_next.code +
+    $('#node-'+(question_node.id).toString())
+    .append("<div id='node-"+ question_node_next.id +
     "' class='" + question_node_next.collapse_id + " " + class_collapsed + "'>" +
     "[" + question_node_next.code + "] " +
     "<h5 class='d-block' mb-2>" + question_node_next.question +
@@ -57,8 +57,8 @@ $(document).ready(function () {
 
   var build_input_question = function(question_node, question_node_next){
 
-    $('#node-'+(question_node.code).toString())
-    .append("<div id='node-"+ question_node_next.code +
+    $('#node-'+(question_node.id).toString())
+    .append("<div id='node-"+ question_node_next.id +
     "' class='" + question_node_next.collapse_id + " collapse'>" +
     "[" + question_node_next.code + "] " +
     `<div class="border border-top mb-2"></div>
@@ -82,8 +82,8 @@ $(document).ready(function () {
 
     options_id_counter += 1;
 
-    $('#node-'+(question_node.code).toString())
-    .append("<div id='node-"+ question_node_next.code +
+    $('#node-'+(question_node.id).toString())
+    .append("<div id='node-"+ question_node_next.id +
     "' class='" + question_node_next.collapse_id + " collapse'>" +
     "[" + question_node_next.code + "] " +
     `
@@ -174,7 +174,6 @@ $(document).ready(function () {
           last_node.next_no.question_type
         );
       }
-      binary_id_counter -= 1;
 
     }
     else if (
