@@ -1,23 +1,8 @@
 @TODO
-use a tree structure for the advanced view
-with the codes as base
-50 ->
-100 ->
-200 ->
----
-use bootstrap 4 its collpase NOT JS if possible
-
-
-@TODO
 @reviewed with doctors
-a site for pros
-where only binary questions are displayed solo
-after that the full branch with input and options question is displayed
-in a single container form
----
-create advanced-view.html
-create advanced_view_controller.py
-add to application context
+the advanced view
+@TODO add switch functionality to the binary question buttons
+@TODO implement post form logic
 
 @TODO
 add the currently asked question to the summary and mark the current one
@@ -38,10 +23,19 @@ update when clicked on a question in the summary the question with the answer
 that was once given by the user
 
 @TODO
+when clicking on the Home button at a question "acquistion"
+clear the data in the questionary
+
+@TODO
 realtime verification in js for the input question
 
-
-
+@TODO
+create a page where new requests can be created
+make it look like a post it pin board
+including a discussion for each post
+---
+create a link in the home page and replace the lorem ipsum
+the link references the new app and does redirect to the pinboard page
 
 ###
 ### not necessary todos but for presentation in teh clinic would be nice
@@ -62,16 +56,8 @@ in the rpepare method or womewhere there figure out which state is active
 make a simple json file with questions to the stomach pain protocol
 something small but try to read in a bit on wiki -> so it looks quite
 realistic
-
-
-@TODO
-prepare a simple insert of a question
-and a asimple remove of a question
-so can show that this is easy to handle
-----
-the questions might be handled quite similar to a list
-since when inserting a new question or when remov one the direct naibors (next
-and previous) of the inserted or removed question need to be relinked
+---
+example data from other themes show up with the genericness of the app
 
 
 @TODO
