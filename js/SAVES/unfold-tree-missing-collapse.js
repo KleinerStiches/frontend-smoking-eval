@@ -1,18 +1,8 @@
 $(document).ready(function () {
 
   var build_binary_question = function (question_node, question_node_next) {
-    if(binary_id_counter === 0){
-      class_collapsed = ""
-    }
-    else
-    {
-        class_collapsed = "collapse";
-    }
-
-
     $('#node-'+(question_node.code).toString())
-    .append("<div id='node-"+ question_node_next.code +
-    "' class='" + question_node_next.collapse_id + " " + class_collapsed + "'>" +
+    .append("<div id='node-"+ question_node_next.code +"'>" +
     "[" + question_node_next.code + "] " +
     "<h5 class='d-block' mb-2>" + question_node_next.question +
     `</h5>
@@ -25,8 +15,7 @@ $(document).ready(function () {
       <label
         class='btn btn-primary'
         data-toggle='collapse'
-        data-target='.` +
-        question_node_next.next_yes.collapse_id + `'
+        data-target='.multi-collapse'
         aria-expanded='false'>
         <input
           type='radio'
@@ -36,12 +25,7 @@ $(document).ready(function () {
         </input>
       </label>
 
-      <label
-        class='btn btn-primary'
-        data-toggle='collapse'
-        data-target='.` +
-        question_node_next.next_no.collapse_id + `'
-        aria-expanded='false'>
+      <label class='btn btn-primary'>
         <input
           type='radio'
           name='answer'
@@ -56,10 +40,8 @@ $(document).ready(function () {
   }
 
   var build_input_question = function(question_node, question_node_next){
-
     $('#node-'+(question_node.code).toString())
-    .append("<div id='node-"+ question_node_next.code +
-    "' class='" + question_node_next.collapse_id + " collapse'>" +
+    .append("<div id='node-"+ question_node_next.code +"'>" +
     "[" + question_node_next.code + "] " +
     `<div class="border border-top mb-2"></div>
     <h5 class="d-block">` +
@@ -79,12 +61,10 @@ $(document).ready(function () {
   }
 
   var build_options_question = function (question_node, question_node_next) {
-
     options_id_counter += 1;
 
     $('#node-'+(question_node.code).toString())
-    .append("<div id='node-"+ question_node_next.code +
-    "' class='" + question_node_next.collapse_id + " collapse'>" +
+    .append("<div id='node-"+ question_node_next.code +"'>" +
     "[" + question_node_next.code + "] " +
     `
     <div class="border border-top mb-2"></div>
@@ -120,8 +100,7 @@ $(document).ready(function () {
     }
     else if(last_node.question_type === "question-binary")
     {
-      binary_id_counter += 1;
-
+      // last node binary next yes section
       if(last_node.next_yes === "/acquisition")
       {
         return
@@ -174,8 +153,6 @@ $(document).ready(function () {
           last_node.next_no.question_type
         );
       }
-      binary_id_counter -= 1;
-
     }
     else if (
       last_node.question_type === "question-options" ||
@@ -215,9 +192,6 @@ $(document).ready(function () {
       console.log("other type");
     }
   }
-
-  var binary_id_counter = 0
-  var current_collapse_class = "default"
 
   var options_id_counter = 0
 

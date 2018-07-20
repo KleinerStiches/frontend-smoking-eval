@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
   var build_binary_question = function (question_node, question_node_next) {
+    temp_binary_id_counter = binary_id_counter + 1;
     if(binary_id_counter === 0){
       class_collapsed = ""
     }
@@ -9,10 +10,9 @@ $(document).ready(function () {
         class_collapsed = "collapse";
     }
 
-
     $('#node-'+(question_node.code).toString())
     .append("<div id='node-"+ question_node_next.code +
-    "' class='" + question_node_next.collapse_id + " " + class_collapsed + "'>" +
+    "' class='" + current_collapse_class + " " + class_collapsed + "'>" +
     "[" + question_node_next.code + "] " +
     "<h5 class='d-block' mb-2>" + question_node_next.question +
     `</h5>
@@ -25,8 +25,8 @@ $(document).ready(function () {
       <label
         class='btn btn-primary'
         data-toggle='collapse'
-        data-target='.` +
-        question_node_next.next_yes.collapse_id + `'
+        data-target='.` + "multi-collapse-yes-" +
+        temp_binary_id_counter.toString() + `'
         aria-expanded='false'>
         <input
           type='radio'
@@ -39,8 +39,8 @@ $(document).ready(function () {
       <label
         class='btn btn-primary'
         data-toggle='collapse'
-        data-target='.` +
-        question_node_next.next_no.collapse_id + `'
+        data-target='.` + "multi-collapse-no-" +
+        temp_binary_id_counter.toString() + `'
         aria-expanded='false'>
         <input
           type='radio'
@@ -56,10 +56,13 @@ $(document).ready(function () {
   }
 
   var build_input_question = function(question_node, question_node_next){
-
+    current_collapse_class_split = current_collapse_class.split("-");
+    current_collapse_class_id = Number(current_collapse_class_split[current_collapse_class_split.length-1])
+    temp_binary_id_counter = current_collapse_class_id + 1;
+    next_collapse_class = current_collapse_class.substring(0,current_collapse_class.length-2) + "-" + temp_binary_id_counter;
     $('#node-'+(question_node.code).toString())
     .append("<div id='node-"+ question_node_next.code +
-    "' class='" + question_node_next.collapse_id + " collapse'>" +
+    "' class='" + next_collapse_class + " collapse'>" +
     "[" + question_node_next.code + "] " +
     `<div class="border border-top mb-2"></div>
     <h5 class="d-block">` +
@@ -79,12 +82,16 @@ $(document).ready(function () {
   }
 
   var build_options_question = function (question_node, question_node_next) {
+    current_collapse_class_split = current_collapse_class.split("-");
+    current_collapse_class_id = Number(current_collapse_class_split[current_collapse_class_split.length-1])
+    temp_binary_id_counter = current_collapse_class_id + 1;
+    next_collapse_class = current_collapse_class.substring(0,current_collapse_class.length-2) + "-" + temp_binary_id_counter;
 
     options_id_counter += 1;
 
     $('#node-'+(question_node.code).toString())
     .append("<div id='node-"+ question_node_next.code +
-    "' class='" + question_node_next.collapse_id + " collapse'>" +
+    "' class='" + next_collapse_class + " collapse'>" +
     "[" + question_node_next.code + "] " +
     `
     <div class="border border-top mb-2"></div>
@@ -121,13 +128,14 @@ $(document).ready(function () {
     else if(last_node.question_type === "question-binary")
     {
       binary_id_counter += 1;
-
+      // last node binary next yes section
       if(last_node.next_yes === "/acquisition")
       {
         return
       }
       else if(last_node.next_yes.question_type === "question-binary")
       {
+        current_collapse_class = "multi-collapse-yes-" + binary_id_counter.toString();
         build_binary_question(last_node, last_node.next_yes);
         expand_tree_rec(last_node.next_yes);
       }
@@ -155,6 +163,7 @@ $(document).ready(function () {
       }
       else if(last_node.next_no.question_type === "question-binary")
       {
+        current_collapse_class = "multi-collapse-no-" + binary_id_counter.toString();
         build_binary_question(last_node, last_node.next_no);
         expand_tree_rec(last_node.next_no);
       }
@@ -175,7 +184,6 @@ $(document).ready(function () {
         );
       }
       binary_id_counter -= 1;
-
     }
     else if (
       last_node.question_type === "question-options" ||
