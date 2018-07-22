@@ -23,7 +23,8 @@ $(document).ready(function () {
       data-toggle='buttons'>
 
       <label
-        class='btn btn-primary'
+        id='` + "yes-" + question_node.id + `'
+        class='btn btn-primary btn-group-binary'
         data-toggle='collapse'
         data-target='.` +
         question_node_next.next_yes.collapse_id + `'
@@ -37,7 +38,8 @@ $(document).ready(function () {
       </label>
 
       <label
-        class='btn btn-primary'
+        id='` + "no-" + question_node.id + `'
+        class='btn btn-primary btn-group-binary'
         data-toggle='collapse'
         data-target='.` +
         question_node_next.next_no.collapse_id + `'
@@ -45,8 +47,7 @@ $(document).ready(function () {
         <input
           type='radio'
           name='answer'
-          value='Nein'
-          checked>
+          value='Nein'>
           Nein
         </input>
       </label>
