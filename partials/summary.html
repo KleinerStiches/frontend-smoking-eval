@@ -1,12 +1,17 @@
 
 <div class="col-3">
-  <h4 class="m-2 mt-3">Beantwortete Fragen</h4>
+  <h4 class="m-2 mt-3 bg-white">Beantwortete Fragen</h4>
 
-  <ul class="m-2 list-group">
+  <ul class="m-2 list-group list-group-flush">
     {% for clue in summary %}
-      <li class="list-group-item">
-        <a
-          class=""
+      <li class="list-group-item
+      {% if current_question_id == clue['code'] %}
+        list-group-item-primary
+      {% else %}
+        list-group-item-light
+      {% end %}">
+
+        <a class="d-block"
           href="/{{ escape(clue['question_url']) }}{{ escape(clue['code']) }}">
           {{ escape(clue["question"]) }}
         </a>

@@ -23,10 +23,6 @@ update when clicked on a question in the summary the question with the answer
 that was once given by the user
 
 @TODO
-when clicking on the Home button at a question "acquistion"
-clear the data in the questionary
-
-@TODO
 realtime verification in js for the input question
 
 @TODO
