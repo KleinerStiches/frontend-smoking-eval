@@ -5,20 +5,6 @@ the advanced view
 @TODO implement post form logic
 
 @TODO
-add the currently asked question to the summary and mark the current one
-as active
----
-what would be nice is to have kind of the left border is thcker and has the
-primary color the active one has another color and is outlined or somehting
----
-*solution add the question as a separate param
-current_question = the question
-in the summary.html
-in the summary for loop
-if current_quest.code = clue.code
-  mark as active and write ... instead of answer
-
-@TODO
 update when clicked on a question in the summary the question with the answer
 that was once given by the user
 
