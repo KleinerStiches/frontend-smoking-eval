@@ -25,6 +25,7 @@ $(document).ready(function () {
       <label
         id='` + "yes-" + question_node.id + `'
         class='btn btn-primary btn-group-binary'
+        role='button'
         data-toggle='collapse'
         data-target='.` +
         question_node_next.next_yes.collapse_id + `'
@@ -40,6 +41,7 @@ $(document).ready(function () {
       <label
         id='` + "no-" + question_node.id + `'
         class='btn btn-primary btn-group-binary'
+        role='button'
         data-toggle='collapse'
         data-target='.` +
         question_node_next.next_no.collapse_id + `'
