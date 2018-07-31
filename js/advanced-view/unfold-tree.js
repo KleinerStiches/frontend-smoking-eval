@@ -1,4 +1,6 @@
-$(document).ready(function () {
+//$(document).ready(function () {
+
+var unfold_tree = function() {
 
   var build_binary_question = function (question_node, question_node_next) {
     if(binary_id_counter === 0){
@@ -17,13 +19,14 @@ $(document).ready(function () {
     "<h5 class='d-block' mb-2>" + question_node_next.question +
     `</h5>
     <div
+      id='button-group-` + (question_node_next.code).toString() + `'
       class='btn-group btn-group-toggle mb-2'
       role='group'
-      aria-label='Basic example'
+      aria-label='group-` + question_node_next.code + `'
       data-toggle='buttons'>
 
       <label
-        id='` + "yes-" + question_node.id + `'
+        id='` + "yes-" + question_node_next.id + `'
         class='btn btn-primary btn-group-binary'
         role='button'
         data-toggle='collapse'
@@ -39,7 +42,7 @@ $(document).ready(function () {
       </label>
 
       <label
-        id='` + "no-" + question_node.id + `'
+        id='` + "no-" + question_node_next.id + `'
         class='btn btn-primary btn-group-binary'
         role='button'
         data-toggle='collapse'
@@ -231,4 +234,5 @@ $(document).ready(function () {
 
   root = question_tree_json;
   expand_tree_rec(root);
-});
+}
+//});

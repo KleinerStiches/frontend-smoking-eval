@@ -1,8 +1,22 @@
+
 @TODO
 @reviewed with doctors
 the advanced view
-@TODO add switch functionality to the binary question buttons
+@DONE add switch functionality to the binary question buttons
 @TODO implement post form logic
+
+
+@TODO
+in acquisition use the summary object to show all the input data
+---
+make something like a hint that tells the user this data got stored
+and the button as is returns back to the entry
+
+
+@TODO
+make the reset of the data in store in the first page
+so if someone in the middle stops or does not finish the questionary
+does not get confused since there is data although there should not be any
 
 @TODO
 update when clicked on a question in the summary the question with the answer

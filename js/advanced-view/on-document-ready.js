@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
-  // run initial code here
+  unfold_tree();
+
+  add_switch_to_binary_questions();
 
 });

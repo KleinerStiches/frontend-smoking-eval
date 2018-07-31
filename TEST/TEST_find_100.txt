@@ -1,0 +1,231 @@
+
+{
+    "id": "root",
+    "code": "root",
+    "question_type": "question-input",
+    "next": {
+        "code": "3",
+        "question": "Sind Sie aktuell Raucher?",
+        "next_yes": {
+            "code": "4",
+            "question": "Rauchen Sie Zigaretten?",
+            "next_yes": {
+                "code": "5",
+                "question": "Wie viel rauchen Sie aktuell im Durchschnitt?",
+                "placeholder": "Zigaretten/Tag",
+                "next": {
+                    "code": "6",
+                    "question": "Wie alt waren Sie als Sie mit Rauchen angefangen haben?",
+                    "placeholder": "Jahre",
+                    "next": {
+                        "code": "7",
+                        "question": "Im Durchschnitt, wie viel haben Sie geraucht?",
+                        "placeholder": "P\u00e4ckli/Jahr",
+                        "next": "/acquisition",
+                        "id": "c5089e27-80ef-43cc-a257-c0664438942d",
+                        "collapse_id": 11798,
+                        "question_type": "question-input"
+                    },
+                    "id": "aca3c6b2-8905-4875-b7bd-39df3818b5ed",
+                    "question_type": "question-input",
+                    "collapse_id": 11798
+                },
+                "id": "956c78e3-39a6-4493-b00f-45b034fee9ec",
+                "question_type": "question-input",
+                "collapse_id": 11798
+            },
+            "next_no": {
+                "code": "50",
+                "question": "Was rauchen Sie alternativ?",
+                "options": [
+                    "Pfeife",
+                    "Zigarre",
+                    "E-Zigarette"
+                ],
+                "next": {
+                    "code": "51",
+                    "question": "Wie h\u00e4ufig rauchen Sie?",
+                    "options": [
+                        "T\u00e4glich",
+                        "W\u00f6chentlich",
+                        "Monatlich"
+                    ],
+                    "next": {
+                        "code": "52",
+                        "question": "Wie alt waren Sie als Sie mit Rauchen angefangen haben?",
+                        "placeholder": "Jahre",
+                        "next": {
+                            "code": "53",
+                            "question": "Haben Sie fr\u00fcher Zigaretten geraucht?",
+                            "next_yes": {
+                                "code": "101",
+                                "question": "Wie lange haben Sie geraucht?",
+                                "placeholder": "Jahre",
+                                "next": {
+                                    "code": "102",
+                                    "question": "Wie viel haben Sie im Durchschnitt geraucht?",
+                                    "placeholder": "P\u00e4ckli/Tag",
+                                    "next": {
+                                        "code": "103",
+                                        "question": "Vor wie vielen 'Zeitraum' haben Sie aufgeh\u00f6rt?",
+                                        "options": [
+                                            "Woche",
+                                            "Monate",
+                                            "Jahre"
+                                        ],
+                                        "next": {
+                                            "code": "200",
+                                            "question": "Sind Sie Passivraucher?",
+                                            "next_yes": {
+                                                "code": "201",
+                                                "question": "Wie h\u00e4ufig?",
+                                                "options": [
+                                                    "T\u00e4glich",
+                                                    "W\u00f6chentlich",
+                                                    "Weniger als 1x pro Woche"
+                                                ],
+                                                "next": "/acquisition",
+                                                "id": "e5bf695a-18b8-44ca-89c4-2f2ed43aa954",
+                                                "collapse_id": 18533,
+                                                "question_type": "question-options"
+                                            },
+                                            "next_no": "/acquisition",
+                                            "id": "52c87344-5467-4a28-a183-d63bd9de2e91",
+                                            "question_type": "question-binary",
+                                            "collapse_id": 10444
+                                        },
+                                        "id": "8b849bca-eaab-496a-9247-f38de2e7631c",
+                                        "question_type": "question-options",
+                                        "collapse_id": 10444
+                                    },
+                                    "id": "14b0a978-14df-4d1b-b36d-3b660cb52c3e",
+                                    "question_type": "question-input",
+                                    "collapse_id": 10444
+                                },
+                                "id": "21bdaa25-4467-4fe0-a281-0cd7ee87fa61",
+                                "question_type": "question-input",
+                                "collapse_id": 10444
+                            },
+                            "next_no": {
+                                "code": "200",
+                                "question": "Sind Sie Passivraucher?",
+                                "next_yes": {
+                                    "code": "201",
+                                    "question": "Wie h\u00e4ufig?",
+                                    "options": [
+                                        "T\u00e4glich",
+                                        "W\u00f6chentlich",
+                                        "Weniger als 1x pro Woche"
+                                    ],
+                                    "next": "/acquisition",
+                                    "id": "17b05312-733e-4926-b2e6-152051819fbd",
+                                    "collapse_id": 18411,
+                                    "question_type": "question-options"
+                                },
+                                "next_no": "/acquisition",
+                                "id": "268a7d19-44fb-4bf5-9e31-d0c2aba3c7d9",
+                                "question_type": "question-binary",
+                                "collapse_id": 10282
+                            },
+                            "id": "8ae872b2-523e-4030-a569-ff0b09f966f8",
+                            "question_type": "question-binary",
+                            "collapse_id": 7426
+                        },
+                        "id": "199cff89-42b6-4f5d-922d-3777b81b39a4",
+                        "question_type": "question-input",
+                        "collapse_id": 7426
+                    },
+                    "id": "877bb4c3-113c-4035-b3b4-aea4d9917f6d",
+                    "question_type": "question-options",
+                    "collapse_id": 7426
+                },
+                "id": "de672da8-008c-4373-9f6d-fb4a20f12ddd",
+                "question_type": "question-options",
+                "collapse_id": 7426
+            },
+            "id": "a6b508e8-8def-48c7-bf80-86bc78423129",
+            "question_type": "question-binary",
+            "collapse_id": 3928
+        },
+        "next_no": {
+            "code": "100",
+            "question": "Haben Sie fr\u00fcher geraucht?",
+            "next_yes": {
+                "code": "101",
+                "question": "Wie lange haben Sie geraucht?",
+                "placeholder": "Jahre",
+                "next": {
+                    "code": "102",
+                    "question": "Wie viel haben Sie im Durchschnitt geraucht?",
+                    "placeholder": "P\u00e4ckli/Tag",
+                    "next": {
+                        "code": "103",
+                        "question": "Vor wie vielen 'Zeitraum' haben Sie aufgeh\u00f6rt?",
+                        "options": [
+                            "Woche",
+                            "Monate",
+                            "Jahre"
+                        ],
+                        "next": {
+                            "code": "200",
+                            "question": "Sind Sie Passivraucher?",
+                            "next_yes": {
+                                "code": "201",
+                                "question": "Wie h\u00e4ufig?",
+                                "options": [
+                                    "T\u00e4glich",
+                                    "W\u00f6chentlich",
+                                    "Weniger als 1x pro Woche"
+                                ],
+                                "next": "/acquisition",
+                                "id": "269367bd-2c7d-4e08-aab6-28b900b2358f",
+                                "collapse_id": 11341,
+                                "question_type": "question-options"
+                            },
+                            "next_no": "/acquisition",
+                            "id": "ec3871bb-4303-4b9c-a7c8-47e6d0baffe0",
+                            "question_type": "question-binary",
+                            "collapse_id": 4751
+                        },
+                        "id": "556ed4c9-9be3-450a-ac43-ccffecea8478",
+                        "question_type": "question-options",
+                        "collapse_id": 4751
+                    },
+                    "id": "0570a322-436e-4f3c-938d-30296b8f581e",
+                    "question_type": "question-input",
+                    "collapse_id": 4751
+                },
+                "id": "83035948-341b-422a-a1a5-0d04f1bd95df",
+                "question_type": "question-input",
+                "collapse_id": 4751
+            },
+            "next_no": {
+                "code": "200",
+                "question": "Sind Sie Passivraucher?",
+                "next_yes": {
+                    "code": "201",
+                    "question": "Wie h\u00e4ufig?",
+                    "options": [
+                        "T\u00e4glich",
+                        "W\u00f6chentlich",
+                        "Weniger als 1x pro Woche"
+                    ],
+                    "next": "/acquisition",
+                    "id": "4dad86c0-5b24-4500-a89b-b487b3500bcb",
+                    "collapse_id": 13518,
+                    "question_type": "question-options"
+                },
+                "next_no": "/acquisition",
+                "id": "c431bc5b-80ce-4f77-914e-b969704fdca7",
+                "question_type": "question-binary",
+                "collapse_id": 8675
+            },
+            "id": "8fdf306b-7084-434c-899c-a30f08e463c7",
+            "question_type": "question-binary",
+            "collapse_id": 3457
+        },
+        "id": "80d84440-6e24-432a-8f39-2fe07304edd3",
+        "question_type": "question-binary",
+        "collapse_id": 0
+    }
+}

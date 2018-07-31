@@ -1,4 +1,6 @@
-$(document).ready(function () {
+//$(document).ready(function () {
+
+var add_switch_handlers = function() {
 
   var toggle_aria_hidden = function(plain_id){
     return;
@@ -9,6 +11,31 @@ $(document).ready(function () {
   for (btn_grp of all_button_groups){
     var btn_grp_id = btn_grp.id;
     if (btn_grp_id.indexOf("yes-") >= 0) {
+      // TODO remove for test reason only
+      console.log(" ");
+      console.log("########################## yes ########################");
+      console.log("parents id:" + btn_grp.parentNode.id);
+      console.log("id: " + btn_grp.id);
+      console.log($("#" + btn_grp_id).attr("data-target"));
+      console.log(btn_grp);
+      var cani_select = $("#" + btn_grp_id);
+
+      if(btn_grp.parentNode.id.indexOf("100") >= 0 )
+      {
+        try{
+          $("#" + btn_grp_id).click( function(){console.log("dummy 100 yes");});
+        } catch(e){
+          console.log("##################");
+          console.log("##################");
+          console.log("##################");
+          console.log(e.message);
+          console.log("##################");
+          console.log("##################");
+          console.log("##################");
+        }
+      }
+
+
       $("#" + btn_grp_id).on("click", function(){
 
           var id_without_yes_no_tag = this.id.replace("yes-", "");
@@ -31,29 +58,19 @@ $(document).ready(function () {
           {
             var multicollase_target = ".multicollapse-" + id_for_yes_and_no_so_can_toggle_when_set_once;
 
-            // if one brach already has
             if(question_collapse_target === multicollase_target && inverse_question_collapse_target !== question_collapse_target)
             {
               var multicollase_target = question_collapse_target;
-
               $(inverse_question_collapse_target).addClass(multicollase_target.replace(".", ""));
-
-              var test2 = $("#no-"+id_without_yes_no_tag).attr("data-target");
               if($("#no-"+id_without_yes_no_tag).attr("data-target") !== multicollase_target)
               {
                 $("#no-"+id_without_yes_no_tag).attr("data-target", multicollase_target)
               }
             }
 
-            // when pressed a button once check if the multicollapsed class was NOT set already
-            if(!(question_collapse_target === multicollase_target))
+            if(question_collapse_target !== multicollase_target)
             {
-              // add the multiclass to all the elements with the no-id as well as all with the yes-id tag
-              // and add the multicollapse class to them
-              $(question_collapse_target).addClass(multicollase_target.replace(".", ""))
-
-              // add class as new data target to both answer buttons
-              var test1 = $("#yes-"+id_without_yes_no_tag).attr("data-target");
+              $(question_collapse_target).addClass(multicollase_target.replace(".", ""));
               if($("#yes-"+id_without_yes_no_tag).attr("data-target") !== multicollase_target)
               {
                 $("#yes-"+id_without_yes_no_tag).attr("data-target", multicollase_target)
@@ -63,6 +80,30 @@ $(document).ready(function () {
       });
     }
     else if (btn_grp_id.indexOf("no-") >= 0) {
+      // TODO remove for test reason only
+      var cani_select = $("#" + btn_grp_id);
+      console.log(" ");
+      console.log("########################## no ########################");
+      console.log("parents id:" + btn_grp.parentNode.id);
+      console.log("id: " + btn_grp.id);
+      console.log($("#" + btn_grp_id).attr("data-target"));
+      console.log(btn_grp);
+
+      if(btn_grp.parentNode.id.indexOf("100") >= 0 )
+      {
+        try{
+          $("#" + btn_grp_id).click( function(){console.log("dummy 100 no");});
+        } catch(e){
+          console.log("##################");
+          console.log("##################");
+          console.log("##################");
+          console.log(e.message);
+          console.log("##################");
+          console.log("##################");
+          console.log("##################");
+        }
+      }
+
       $("#" + btn_grp_id).on("click", function(){
 
         var id_without_yes_no_tag = this.id.replace("no-", "");
@@ -85,28 +126,19 @@ $(document).ready(function () {
         {
           var multicollase_target = ".multicollapse-" + id_for_yes_and_no_so_can_toggle_when_set_once;
 
-          // if one brach already has
           if(question_collapse_target === multicollase_target && inverse_question_collapse_target !== question_collapse_target)
           {
             var multicollase_target = question_collapse_target;
             $(inverse_question_collapse_target).addClass(multicollase_target.replace(".", ""));
-
-            var test3 = $("#yes-"+id_without_yes_no_tag).attr("data-target");
             if($("#yes-"+id_without_yes_no_tag).attr("data-target") !== multicollase_target)
             {
               $("#yes-"+id_without_yes_no_tag).attr("data-target", multicollase_target)
             }
           }
 
-          // when pressed a button once check if the multicollapsed class was NOT set already
-          if(!(question_collapse_target === multicollase_target))
+          if(question_collapse_target !== multicollase_target)
           {
-            // add the multiclass to all the elements with the no-id as well as all with the yes-id tag
-            // and add the multicollapse class to them
-            $(question_collapse_target).addClass(multicollase_target.replace(".", ""))
-
-            // add class as new data target to both answer buttons
-            var test4 = $("#no-"+id_without_yes_no_tag).attr("data-target");
+            $(question_collapse_target).addClass(multicollase_target.replace(".", ""));
             if($("#no-"+id_without_yes_no_tag).attr("data-target") !== multicollase_target)
             {
               $("#no-"+id_without_yes_no_tag).attr("data-target", multicollase_target)
@@ -120,4 +152,6 @@ $(document).ready(function () {
         console.log("str.indexOf returns -1. does not find ");
     }
   }
-});
+
+}
+//});

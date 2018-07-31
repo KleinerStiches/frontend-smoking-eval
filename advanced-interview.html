@@ -26,7 +26,7 @@
       and ajax instead of loading into html -->
       {% import json %}
       <div id="content-container" class="d-none">
-        {{ json.dumps(question_tree) }}
+        {{ json.dumps(question_tree, indent=4) }}
       </div>
 
     <!-- footer -->
@@ -45,6 +45,14 @@
     <script
       type="text/javascript"
       src="{{ static_url("js/advanced-view/question-switch.js") }}">
+    </script>
+    <script
+      type="text/javascript"
+      src="{{ static_url("js/advanced-view/add-switch-to-binary-questions.js") }}">
+    </script>
+    <script
+      type="text/javascript"
+      src="{{ static_url("js/advanced-view/on-document-ready.js") }}">
     </script>
   </body>
 </html>
