@@ -35,7 +35,7 @@ var unfold_tree = function() {
         aria-expanded='false'>
         <input
           type='radio'
-          name='answer'
+          name='answer-` + question_node_next.code + `'
           value='Ja'>
           Ja
         </input>
@@ -51,7 +51,7 @@ var unfold_tree = function() {
         aria-expanded='false'>
         <input
           type='radio'
-          name='answer'
+          name='answer-` + question_node_next.code + `''
           value='Nein'>
           Nein
         </input>
@@ -76,7 +76,7 @@ var unfold_tree = function() {
         class="form-control"
         type="text"
         placeholder=` + question_node_next.placeholder + `
-        name="answer">
+        name="answer-` + question_node_next.code + `">
       </input>
     </div>
     `
@@ -112,9 +112,8 @@ var unfold_tree = function() {
       .append(
         `<input
           type="radio"
-          name="answer"
-          value="` + option + `"
-          checked> `+ option +`<br>`
+          name="answer-` + question_node_next.code + `"
+          value="` + option + `"> `+ option + `<br>`
       );
     }
   }

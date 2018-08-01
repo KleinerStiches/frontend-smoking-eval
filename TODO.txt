@@ -7,6 +7,10 @@ the advanced view
 
 
 @TODO
+remove the [code] in the andvanced interview unfold-tree.js from
+all questions top
+
+@TODO
 in acquisition use the summary object to show all the input data
 ---
 make something like a hint that tells the user this data got stored
