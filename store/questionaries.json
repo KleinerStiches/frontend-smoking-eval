@@ -1,9 +1,8 @@
 {
-    "100": "Ja",
-    "101": "21",
-    "102": "22",
-    "103": "Monate",
-    "201": "Weniger als 1x pro Woche",
-    "3": "Nein",
+    "case_id": "12345",
+    "date_of_birth": "0012-12-12",
+    "firstname": "m",
+    "gender": "m",
+    "lastname": "m",
     "questionary": "questionary"
 }

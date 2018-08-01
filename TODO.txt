@@ -1,10 +1,8 @@
-
-@TODO
-@reviewed with doctors
-the advanced view
-@DONE add switch functionality to the binary question buttons
-@TODO implement post form logic
-
+@TODO 
+after the /register.html
+---
+leave it up to the customer to go to the step by step
+or pro view
 
 @TODO
 remove the [code] in the andvanced interview unfold-tree.js from
