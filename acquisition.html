@@ -1,12 +1,37 @@
 {% module Header() %}
   <div class="row justify-content-center">
     <div class="col-9 m-5 p-5 border border-primary rounded bg-light">
-      <h3 class="mb-2">Besten Dank</h3>
-      <p class="mb-2">Ihre Angaben wurden gespeichert.</p>
+
+      <section class="mb-1">
+        <h3>Zusammenfassung</h3>
+      </section>
+      <hr class="mb-3">
+
+      <section>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="mb-3">Beantwortete Fragen</h5>
+            <ul class="list-group list-group-flush">
+              {% for clue in summary %}
+                <li class="list-group-item">
+                  <a class="d-block"
+                    href="/{{ escape(clue['question_url']) }}{{ escape(clue['code']) }}">
+                    {{ escape(clue["question"]) }}
+                  </a>
+                  <span class="d-block">{{ escape(clue["answer"]) }}</span>
+                </li>
+              {% end %}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
       <form class="" action="acquisition" method="post">
         <input class="mt-3 btn btn-outline-primary"
           type="submit"
-          value="Home">
+          value="Absenden">
         </input>
       </form>
     </div><!-- col-9 -->

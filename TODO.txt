@@ -1,8 +1,4 @@
 @TODO
-remove the [code] in the andvanced interview unfold-tree.js from
-all questions top
-
-@TODO
 in acquisition use the summary object to show all the input data
 ---
 make something like a hint that tells the user this data got stored
@@ -10,12 +6,26 @@ and the button as is returns back to the entry
 
 @TODO
 when click on the bianry buttons switch the opposite button yes or no
-to DISABLED 
+to DISABLED
 
 @TODO
 make the reset of the data in store in the first page
 so if someone in the middle stops or does not finish the questionary
 does not get confused since there is data although there should not be any
+
+@TODO
+when go back to an already answerd question delete all answers until this
+question. since can not only delete to the last binary
+---
+since the binary can be in the wrong tree
+
+@TODO
+instead of lorem ipsum ... in the /home page
+---
+write an instruction how this questioning is going to work
+1. regitration
+2. chose how to solve the questioning
+3. when finished the data is stored and get redirected back to home
 
 @TODO
 update when clicked on a question in the summary the question with the answer
