@@ -1,14 +1,19 @@
-@TODO
-in acquisition use the summary object to show all the input data
----
-make something like a hint that tells the user this data got stored
-and the button as is returns back to the entry
+
 
 @TODO
 when click on the bianry buttons switch the opposite button yes or no
 to DISABLED
+----
+@CHANGED
+disabled does not work
+better create a logic that makes the label point to somehting else
+than the correct id
+---
+then when press the button write back the key
+something like
+class="opposite-active-id"
 
-@TODO
+@DONE
 make the reset of the data in store in the first page
 so if someone in the middle stops or does not finish the questionary
 does not get confused since there is data although there should not be any

@@ -1,3 +1,8 @@
 {
+    "case_id": "123456",
+    "date_of_birth": "0012-12-12",
+    "firstname": "m",
+    "gender": "m",
+    "lastname": "m",
     "questionary": "questionary"
 }
