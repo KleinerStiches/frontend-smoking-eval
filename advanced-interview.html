@@ -5,9 +5,22 @@
 
           <section class="mb-2">
             <h3>Formular Raucher Evaluation</h3>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <div
+              class="alert alert-primary alert-dismissible fade show"
+              role="alert">
+              Beantworten Sie die Fragen in der Sektion unterhalb.<br>
+              Abhängig von ihren Anworten werden weitere Fragen
+              angezeigt.<br>
+              Wenn Sie alle Fragen beantwortet haben, drücken Sie auf
+              den Abschliessen-Button ganz unten.<br>
+              Sollten Sie einen Fehler machen können Sie jederzeit Ihre
+              Antwort korrigieren.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
           </section>
+          <hr>
 
           <form
             action="advanced-interview"
@@ -17,11 +30,12 @@
 
             </div>
 
+            <hr>
             <input
               class="btn btn-outline-primary mb-2"
               type="submit"
               name="button"
-              value="Weiter">
+              value="Abschliessen">
             </input>
 
           </form>

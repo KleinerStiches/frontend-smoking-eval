@@ -1,11 +1,11 @@
+@DONE
+instead of Weiter use Abschliessen
+in the advanced intreview
 
 @DONE
-when go back to an already answerd question delete all answers until this
-question. since can not only delete to the last binary
----
-since the binary can be in the wrong tree
+in the advanced-interview add dismissable info for the form
 
-@TODO
+@DONE
 instead of lorem ipsum ... in the /home page
 ---
 write an instruction how this questioning is going to work
@@ -25,6 +25,12 @@ in the view then if answer is not none display or checkthe answer
 
 @TODO
 realtime verification in js for the input question
+
+@TODO
+instead of style make a settings button in there
+there are the options
+  language
+  theme
 
 @TODO
 clean up css and js directories from js and css from issue manager and other

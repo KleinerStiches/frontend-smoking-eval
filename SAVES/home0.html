@@ -1,0 +1,181 @@
+{% module Header() %}
+
+  <div class="row justify-content-center">
+    <div class="col-9 m-5 p-5 border border-primary rounded bg-light">
+
+      <section class="mb-5">
+        <div class="container m-0 p-0">
+          <div class="row">
+            <div class="card">
+              <div class="card-body">
+                <div class="col">
+                  <h3>Raucher Evaluation</h3>
+                  <hr class="mb-2">
+                  <h5>
+                    Die Raucher Evaluation ist eine Erhebung von Daten des
+                    individuellen Rauchverhaltens, erreicht durch eine
+                    standardisierte Befragung.
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+
+        <div class="container m-0 p-0">
+          <div class="row">
+
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <section>
+                    <h5 class="mb-2">Wie läuft diese Befragung ab?</h5>
+
+                    <div class="accordion" id="instruction-accordion">
+
+                      <div class="card">
+                        <div id="header-instruction-1" class="card-header bg-primary">
+                          <h5 class="mb-0">
+                            <button
+                              class="btn btn-link text-light"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#full-instruction-1"
+                              aria-expanded="true"
+                              aria-controls="full-instruction-1">
+                              1. Erheben der personenbezognenen Daten
+                            </button>
+                          </h5>
+                        </div>
+                        <div
+                          id="full-instruction-1"
+                          class="collapse bg-light"
+                          aria-labelledby="header-instruction-1"
+                          data-parent="#instruction-accordion">
+                          <div class="card-body">
+                            Im ersten Schritt werden Ihre personenbezognenen Daten
+                            aufgenommen.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div id="header-instruction-2" class="card-header bg-primary">
+                          <h5 class="mb-0">
+                            <button
+                              class="btn btn-link text-light"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#full-instruction-2"
+                              aria-expanded="true"
+                              aria-controls="full-instruction-2">
+                              2. Erheben der Daten zum Rauchverhalten
+                            </button>
+                          </h5>
+                        </div>
+                        <div
+                          id="full-instruction-2"
+                          class="collapse bg-light"
+                          aria-labelledby="header-instruction-2"
+                          data-parent="#instruction-accordion">
+                          <div class="card-body">
+                            Nach dem Sie die personenbezognenen Daten ausgefüllt haben,
+                            können Sie wählen, ob Sie die Fragen zu Ihrem Rauchverhalten entweder
+                            als <b>Einzelfragen</b> oder in einem dynamischen <b>Formular</b>
+                            ausfüllen möchten. Ob <b>Einzelfragen</b> oder <b>Formular</b>, in beiden
+                            Befragungsarten werden dieselben Fragen gestellt, nur anders
+                            dargestellt.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div id="header-instruction-3" class="card-header bg-primary">
+                          <h5 class="mb-0">
+                            <button
+                              class="btn btn-link text-light"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#full-instruction-3"
+                              aria-expanded="true"
+                              aria-controls="full-instruction-3">
+                              3. Antworten im Überblick
+                            </button>
+                          </h5>
+                        </div>
+                        <div
+                          id="full-instruction-3"
+                          class="collapse bg-light"
+                          aria-labelledby="header-instruction-3"
+                          data-parent="#instruction-accordion">
+                          <div class="card-body">
+                            Wenn Sie alle Fragen beantwortet haben, gelangen Sie zu einem
+                            Überblick mit allen Ihren beantworteten Fragen. Die Antworten sind
+                            dann im System gespeichert.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div id="header-instruction-4" class="card-header bg-primary">
+                          <h5 class="mb-0">
+                            <button
+                              class="btn btn-link text-light"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#full-instruction-4"
+                              aria-expanded="true"
+                              aria-controls="full-instruction-4">
+                              4. Korrekturen
+                            </button>
+                          </h5>
+                        </div>
+                        <div
+                          id="full-instruction-4"
+                          class="collapse bg-light"
+                          aria-labelledby="header-instruction-4"
+                          data-parent="#instruction-accordion">
+                          <div class="card-body">
+                            Sie können während der Befragung jederzeit
+                            Ihre Antworten korrigieren.<br>
+                            Für Korrekturen an <b>Einzelfragen</b> klicken Sie links auf der Übersicht
+                            auf die Frage die Sie gerne anders beantworten möchten.<br>
+                            Für Korrekturen im <b>Formular</b> gehen Sie zur Frage die Sie gerne
+                            anders beantworten möchten und ändern dort Ihre Antwort.
+                          </div>
+                        </div>
+                      </div>
+
+                  </section>
+                </div>
+              </div>
+            </div><!-- col-left -->
+
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="mb-2">Datenschutzerklärung</h5>
+                  Lesen Sie die <a href="">Datenschutzerklärung</a>
+                  vollständig durch.
+                  <br>
+                  Indem Sie mit dem Button <i>Zur Evaluation</i> mit der Befragung
+                  beginnen, bestätigen Sie die Datenschutzerklärung vollumfänglich
+                  gelesen, verstanden und akzeptiert zu haben.
+                </div>
+              </div>
+            </div><!-- col-right -->
+
+          </div>
+      </section>
+
+      <section>
+        <a class="btn btn-outline-primary" href="/register">Zur Evaluation</a>
+      </section>
+
+    </div><!-- col-9 -->
+  </div><!-- row -->
+
+{% module Footer() %}
