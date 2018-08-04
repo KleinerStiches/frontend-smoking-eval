@@ -48,34 +48,32 @@ var add_switch_to_binary_questions = function() {
         );
       }
 
-/*
+
       if(this.id.indexOf("yes-") >= 0)
       {
 
         id_without_yes_no_tag = this.id.replace("yes-", "");
-        if ($("#no-"+id_without_yes_no_tag).attr("disabled"))
+        if ($("#no-"+id_without_yes_no_tag).hasClass("disabled-switch"))
         {
-          //$("#no-"+id_without_yes_no_tag).removeAttr("disabled");
-          $("#no-"+id_without_yes_no_tag).removeClass("focus");
+          $("#no-"+id_without_yes_no_tag).removeClass("disabled-switch");
         }
 
-        //$(this).attr("disabled", "disabled");
+        $(this).addClass("disabled-switch");
 
       }
       else
       {
 
         id_without_yes_no_tag = this.id.replace("no-", "");
-        if ($("#yes-"+id_without_yes_no_tag).attr("disabled"))
+        if ($("#yes-"+id_without_yes_no_tag).hasClass("disabled-switch"))
         {
-          //$("#yes-"+id_without_yes_no_tag).removeAttr("disabled");
-          $("#yes-"+id_without_yes_no_tag).removeClass("focus");
+          $("#yes-"+id_without_yes_no_tag).removeClass("disabled-switch");
         }
 
-        //$(this).attr("disabled", "disabled");
+        $(this).addClass("disabled-switch");
 
       }
-*/
+
 
     });
 
