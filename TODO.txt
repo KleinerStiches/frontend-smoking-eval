@@ -1,27 +1,5 @@
 
-
 @DONE
-when click on the bianry buttons switch the opposite button yes or no
-to DISABLED
-----
-@CHANGED
-disabled does not work
-better create a logic that makes the label point to somehting else
-than the correct id
----
-then when press the button write back the key
-something like
-class="opposite-active-id"
----
-at the very beginning of the button check if the
-multicollpase is arady on the targets and the targets have
-NOT class collapsed
----
-then do nothing
-* solved by added pointer-events: none as css class to the currently active
-button. class held in smoking_eval\css\advanced-view\disabled-switch.css
-
-@TODO
 when go back to an already answerd question delete all answers until this
 question. since can not only delete to the last binary
 ---
@@ -47,6 +25,10 @@ in the view then if answer is not none display or checkthe answer
 
 @TODO
 realtime verification in js for the input question
+
+@TODO
+clean up css and js directories from js and css from issue manager and other
+useless sources
 
 ###
 ### not necessary todos but for presentation in teh clinic would be nice
