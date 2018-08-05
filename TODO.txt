@@ -1,19 +1,4 @@
 @DONE
-instead of Weiter use Abschliessen
-in the advanced intreview
-
-@DONE
-in the advanced-interview add dismissable info for the form
-
-@DONE
-instead of lorem ipsum ... in the /home page
----
-write an instruction how this questioning is going to work
-1. regitration
-2. chose how to solve the questioning
-3. when finished the data is stored and get redirected back to home
-
-@TODO
 update when clicked on a question in the summary the question with the answer
 that was once given by the user
 ---
@@ -23,8 +8,28 @@ then pass over either None or the answer
 ---
 in the view then if answer is not none display or checkthe answer
 
+@DONE
+the same for the radio input question
+
+@DONE
+for binaries as well
+
+@TODO
+style in home.html
+when change theme
+the list of instructions accordion have button-outline-dark although
+should have nothing
+
+@TODO
+in advanced-interview binaryquestion unfold-tree.js
+---
+change buton primary to outline primary
+
 @TODO
 realtime verification in js for the input question
+---
+like in the register.html give attribute required and type in the
+input-question.html
 
 @TODO
 instead of style make a settings button in there

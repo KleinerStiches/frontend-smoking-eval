@@ -36,14 +36,21 @@
             <h3 class="mb-2">{{ escape(question) }}</h3>
 
             <input
-              class="btn btn-outline-primary mb-2"
+              class="btn btn-outline-primary mb-2
+              {% if answer == 'Ja' %}
+                focus
+              {% end %}
+              "
               type="submit"
               name="answer"
               value="Ja">
             </input>
 
             <input
-              class="btn btn-outline-primary mb-2"
+              class="btn btn-outline-primary mb-2
+              {% if answer == 'Nein' %}
+                focus
+              {% end %}"
               type="submit"
               name="answer"
               value="Nein">

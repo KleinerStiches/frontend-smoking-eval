@@ -34,7 +34,10 @@
                 type="radio"
                 name="answer"
                 value="{{ escape(option) }}"
-                checked> {{ escape(option) }}<br>
+                {% if answer == option %}
+                  checked
+                {% end %}
+                required> {{ escape(option) }}<br>
               {% end %}
             </div>
 

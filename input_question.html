@@ -32,7 +32,11 @@
                 class="form-control"
                 type="text"
                 placeholder="{{ escape(input_placeholder) }}"
-                name="answer">
+                name="answer"
+                {% if answer %}
+                  value={{ escape(answer) }}
+                {% end %}
+                required>
               </input>
             </div>
 
