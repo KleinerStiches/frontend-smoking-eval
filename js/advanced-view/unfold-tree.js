@@ -15,7 +15,7 @@ var unfold_tree = function() {
     $('#node-'+(question_node.id).toString())
     .append("<div id='node-"+ question_node_next.id +
     "' class='" + question_node_next.collapse_id + " " + class_collapsed + "'>" +
-    "<h5 class='d-block' mb-2>" + question_node_next.question +
+    "<hr><h5 class='d-block' mb-2>" + question_node_next.question +
     `</h5>
     <div
       id='button-group-` + (question_node_next.code).toString() + `'
@@ -26,7 +26,7 @@ var unfold_tree = function() {
 
       <label
         id='` + "yes-" + question_node_next.id + `'
-        class='btn btn-primary btn-group-binary'
+        class='btn btn-outline-primary btn-group-binary'
         role='button'
         data-toggle='collapse'
         data-target='.` +
@@ -42,7 +42,7 @@ var unfold_tree = function() {
 
       <label
         id='` + "no-" + question_node_next.id + `'
-        class='btn btn-primary btn-group-binary'
+        class='btn btn-outline-primary btn-group-binary'
         role='button'
         data-toggle='collapse'
         data-target='.` +
@@ -65,7 +65,7 @@ var unfold_tree = function() {
     $('#node-'+(question_node.id).toString())
     .append("<div id='node-"+ question_node_next.id +
     "' class='" + question_node_next.collapse_id + " collapse'>" +
-    `<div class="border border-top mb-2"></div>
+    `<hr>
     <h5 class="d-block">` +
     question_node_next.question +
     `</h5>
@@ -90,7 +90,7 @@ var unfold_tree = function() {
     .append("<div id='node-"+ question_node_next.id +
     "' class='" + question_node_next.collapse_id + " collapse'>" +
     `
-    <div class="border border-top mb-2"></div>
+    <hr>
     <h5 class="d-block">` +
     question_node_next.question +
     `</h5>

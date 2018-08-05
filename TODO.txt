@@ -1,35 +1,31 @@
 @DONE
-update when clicked on a question in the summary the question with the answer
-that was once given by the user
----
-this could be easy
-in the controller check if there is an answer matching this code
-then pass over either None or the answer
----
-in the view then if answer is not none display or checkthe answer
-
-@DONE
-the same for the radio input question
-
-@DONE
-for binaries as well
-
-@TODO
 style in home.html
 when change theme
 the list of instructions accordion have button-outline-dark although
 should have nothing
 
-@TODO
+@DONE
 in advanced-interview binaryquestion unfold-tree.js
 ---
 change buton primary to outline primary
 
-@TODO
+@DONE
 realtime verification in js for the input question
 ---
 like in the register.html give attribute required and type in the
 input-question.html
+* solved only for single questions
+
+@DONE
+all questions in the advanced interview need a separator above
+binaries as well
+
+@TODO
+add required to input fields dynamically in the add-switch-to-binary-question function
+
+@TODO
+make a nice style to the summary in single questions as well
+when switching theme
 
 @TODO
 instead of style make a settings button in there
