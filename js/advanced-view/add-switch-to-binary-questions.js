@@ -48,7 +48,18 @@ var add_switch_to_binary_questions = function() {
         );
       }
 
+      /*
+      // make them required and remove from the opposite
+      $(question_collapse_target + " :input").attr("required", true);
+      $(question_collapse_target + " :input").addClass(
+        "question-required-"+question_collapse_target.replace(".", "");
+      );
+      if ($(inverse_question_collapse_target + " :input").attr("required") === "required") {
+        $(".question-required-"inverse_question_collapse_target + " :input").attr("required", false);
+      }
+      */
 
+      // append a switch so can press the same button only once
       if(this.id.indexOf("yes-") >= 0)
       {
 

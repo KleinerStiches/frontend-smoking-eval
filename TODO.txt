@@ -1,41 +1,35 @@
-@DONE
-style in home.html
-when change theme
-the list of instructions accordion have button-outline-dark although
-should have nothing
-
-@DONE
-in advanced-interview binaryquestion unfold-tree.js
----
-change buton primary to outline primary
-
-@DONE
-realtime verification in js for the input question
----
-like in the register.html give attribute required and type in the
-input-question.html
-* solved only for single questions
-
-@DONE
-all questions in the advanced interview need a separator above
-binaries as well
-
 @TODO
+in advanced interview
 add required to input fields dynamically in the add-switch-to-binary-question function
 
-@TODO
+@DONE
 make a nice style to the summary in single questions as well
 when switching theme
+---
+whatevr
 
+@TODO
+clean up css and js directories from js and css from issue manager and other
+useless sources
+
+@POSTPONE
 @TODO
 instead of style make a settings button in there
 there are the options
   language
   theme
 
+@POSTPONE
 @TODO
-clean up css and js directories from js and css from issue manager and other
-useless sources
+keep theme and language settings in a separate file
+---
+add CHMOD 777 to this file in the Dockerfile for openshift
+
+@POSTPONE
+@TODO
+instead of only german and handy strings use containers an variables
+for home.html
+as well as for all the other forms
 
 ###
 ### not necessary todos but for presentation in teh clinic would be nice

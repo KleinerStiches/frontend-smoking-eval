@@ -1,14 +1,14 @@
 $(document).ready(function(){
   $("#switch-theme").click(function(){
 
+    $(".list-group-item").toggleClass("list-group-item-secondary");
     $(".navbar").toggleClass("bg-dark");
     $(".border").toggleClass("border-dark");
-    $(".list-group-item-primary").toggleClass("list-group-item-dark");
     $("body").css("background-color", "#555")
 
+    $(".list-group-item").toggleClass("list-group-item-light");
     $(".navbar").toggleClass("bg-primary");
     $(".border").toggleClass("border-primary");
-    $(".list-group-item-dark").toggleClass("list-group-item-primary");
 
 
     if($(".btn").hasClass("btn-outline-primary"))
