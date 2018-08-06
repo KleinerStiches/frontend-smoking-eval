@@ -1,5 +1,6 @@
 
 <div class="col-3">
+  
   <h5 class="m-2 mt-3 bg-transparent">Beantwortete Fragen</h5>
 
   <ul class="m-2 list-group list-group-flush">
@@ -7,10 +8,7 @@
       <li class="list-group-item
       {% if current_question_id == clue['code'] %}
         list-group-item-primary
-      {% else %}
-        list-group-item-light
       {% end %}">
-
         <a class="d-block"
           href="/{{ escape(clue['question_url']) }}{{ escape(clue['code']) }}">
           {{ escape(clue["question"]) }}

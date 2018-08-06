@@ -6,10 +6,24 @@ $(document).ready(function(){
     $(".border").toggleClass("border-dark");
     $("body").css("background-color", "#555")
 
-    $(".list-group-item").toggleClass("list-group-item-light");
+
     $(".navbar").toggleClass("bg-primary");
     $(".border").toggleClass("border-primary");
 
+    if ($(".list-group-item").hasClass("list-group-item-primary"))
+    {
+      $(".list-group-item-primary").toggleClass("list-group-item-light");
+      $(".list-group-item-primary").toggleClass("list-group-item-primary");
+    }
+    else if ($(".list-group-item").hasClass("list-group-item-light"))
+    {
+      $(".list-group-item-light").toggleClass("list-group-item-primary");
+      $(".list-group-item-light").toggleClass("list-group-item-light");
+    }
+    else
+    {
+      // do not manipulate standard list items
+    }
 
     if($(".btn").hasClass("btn-outline-primary"))
     {

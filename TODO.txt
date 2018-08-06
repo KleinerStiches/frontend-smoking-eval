@@ -1,12 +1,13 @@
 @TODO
+when answered the questions by form then do no show the single question to
+correct the answer but show the full form with all the answers
+---
+or at least give the user the oportunity to leave when coming back for a
+correction
+
+@TODO
 in advanced interview
 add required to input fields dynamically in the add-switch-to-binary-question function
-
-@DONE
-make a nice style to the summary in single questions as well
-when switching theme
----
-whatevr
 
 @TODO
 clean up css and js directories from js and css from issue manager and other

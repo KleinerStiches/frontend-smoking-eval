@@ -48,6 +48,55 @@ var add_switch_to_binary_questions = function() {
         );
       }
 
+      /*
+      // make them required and remove from the opposite
+      $(question_collapse_target + " :input").attr("required", true);
+      $(question_collapse_target + " :input").addClass(
+        "question-required-"+question_collapse_target.replace(".", "");
+      );
+      if ($(inverse_question_collapse_target + " :input").attr("required") === "required") {
+        $(".question-required-"inverse_question_collapse_target + " :input").attr("required", false);
+      }
+      */
+
+
+      if(this.id.indexOf("yes-") >= 0)
+      {
+
+        id_without_yes_no_tag = this.id.replace("yes-", "");
+        if ($("#no-"+id_without_yes_no_tag).hasClass("input-children-required"))
+        {
+          $("#no-"+id_without_yes_no_tag).removeClass("input-children-required");
+          $("#no-"+id_without_yes_no_tag).find(
+            "input"+inverse_question_collapse_target
+          ).attr("required", false);
+        }
+
+        $(this).addClass("input-children-required");
+        $("#yes-"+id_without_yes_no_tag).find(
+          "input"+question_collapse_target
+        ).attr("required", true);
+
+      }
+      else
+      {
+
+        id_without_yes_no_tag = this.id.replace("no-", "");
+        if ($("#yes-"+id_without_yes_no_tag).hasClass("input-children-required"))
+        {
+          $("#yes-"+id_without_yes_no_tag).removeClass("input-children-required");
+          $("#yes-"+id_without_yes_no_tag).find(
+            "input"+inverse_question_collapse_target
+          ).attr("required", false);
+        }
+
+        $(this).addClass("input-children-required");
+        $("#no-"+id_without_yes_no_tag).find(
+          "input"+question_collapse_target
+        ).attr("required", true);
+
+      }
+
 
       // append a switch so can press the same button only once
       if(this.id.indexOf("yes-") >= 0)
@@ -57,7 +106,6 @@ var add_switch_to_binary_questions = function() {
         if ($("#no-"+id_without_yes_no_tag).hasClass("disabled-switch"))
         {
           $("#no-"+id_without_yes_no_tag).removeClass("disabled-switch");
-          $(inverse_question_collapse_target+" :input").val("");
         }
 
         $(this).addClass("disabled-switch");
@@ -70,7 +118,6 @@ var add_switch_to_binary_questions = function() {
         if ($("#yes-"+id_without_yes_no_tag).hasClass("disabled-switch"))
         {
           $("#yes-"+id_without_yes_no_tag).removeClass("disabled-switch");
-          $(inverse_question_collapse_target+" :input").val("");
         }
 
         $(this).addClass("disabled-switch");
