@@ -1,4 +1,12 @@
 @TODO
+instead of in the python script
+when press on "Absenden"
+with js go through the branch
+and every input that is in the branch mark with a extra class
+then after marking take all inputs of the form that HAVE NOT that class
+and remove their answers by value="" and removeAttr checked  
+
+@TODO
 when answered the questions by form then do no show the single question to
 correct the answer but show the full form with all the answers
 ---

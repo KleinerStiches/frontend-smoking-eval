@@ -1,6 +1,7 @@
 {
     "100": "Nein",
-    "200": "Nein",
+    "200": "Ja",
+    "201": "Weniger als 1x pro Woche",
     "3": "Nein",
     "case_id": "12345",
     "date_of_birth": "0012-12-12",

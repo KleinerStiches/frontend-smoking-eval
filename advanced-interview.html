@@ -22,6 +22,7 @@
           </section>
 
           <form
+            id="advanced-interview-form"
             action="advanced-interview"
             method="post">
 
@@ -31,6 +32,7 @@
 
             <hr>
             <input
+              id="advanced-interview-post-button"
               class="btn btn-outline-primary mb-2"
               type="submit"
               name="button"
@@ -64,6 +66,10 @@
     <script
       type="text/javascript"
       src="{{ static_url("js/advanced-view/add-switch-to-binary-questions.js") }}">
+    </script>
+    <script
+      type="text/javascript"
+      src="{{ static_url("js/advanced-view/clean-answer-tree.js") }}">
     </script>
     <script
       type="text/javascript"

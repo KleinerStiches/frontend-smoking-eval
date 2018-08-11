@@ -57,7 +57,6 @@ var add_switch_to_binary_questions = function() {
         if ($("#no-"+id_without_yes_no_tag).hasClass("disabled-switch"))
         {
           $("#no-"+id_without_yes_no_tag).removeClass("disabled-switch");
-          $(inverse_question_collapse_target+" :input").val("");
         }
 
         $(this).addClass("disabled-switch");
@@ -70,7 +69,6 @@ var add_switch_to_binary_questions = function() {
         if ($("#yes-"+id_without_yes_no_tag).hasClass("disabled-switch"))
         {
           $("#yes-"+id_without_yes_no_tag).removeClass("disabled-switch");
-          $(inverse_question_collapse_target+" :input").val("");
         }
 
         $(this).addClass("disabled-switch");

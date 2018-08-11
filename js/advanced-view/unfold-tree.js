@@ -3,7 +3,8 @@
 var unfold_tree = function() {
 
   var build_binary_question = function (question_node, question_node_next) {
-    if(binary_id_counter === 0){
+    if(binary_id_counter === 0)
+    {
       class_collapsed = ""
     }
     else
@@ -12,11 +13,31 @@ var unfold_tree = function() {
     }
 
 
+    var questions_next_yes_div_id = question_node_next.next_yes.id;
+    if (questions_next_yes_div_id === undefined) {
+      questions_next_yes_div_id = "acquisition";
+    }
+
+
+    var questions_next_no_div_id = question_node_next.next_no.id;
+    if (questions_next_no_div_id === undefined) {
+        questions_next_no_div_id = "acquisition";
+    }
+
     $('#node-'+(question_node.id).toString())
     .append("<div id='node-"+ question_node_next.id +
-    "' class='" + question_node_next.collapse_id + " " + class_collapsed + "'>" +
+    "' class='" + question_node_next.collapse_id + " " + class_collapsed + " question-binary'>" +
     "<hr><h5 class='d-block' mb-2>" + question_node_next.question +
     `</h5>
+    <label for='answer-code-` + question_node_next.id + `' class='d-none'>
+      answer-` + question_node_next.code + `
+    </label>
+    <label for='next-yes-id-` + question_node_next.id + `' class='d-none'>
+      ` + questions_next_yes_div_id + `
+    </label>
+    <label for='next-no-id-` + question_node_next.id + `' class='d-none'>
+      ` + questions_next_no_div_id + `
+    </label>
     <div
       id='button-group-` + (question_node_next.code).toString() + `'
       class='btn-group btn-group-toggle mb-2'
@@ -34,7 +55,8 @@ var unfold_tree = function() {
         aria-expanded='false'>
         <input
           type='radio'
-          name='answer-` + question_node_next.code + `'
+          name='answer-` +
+          question_node_next.code + `-` + question_node_next.id + `'
           value='Ja'>
           Ja
         </input>
@@ -50,7 +72,8 @@ var unfold_tree = function() {
         aria-expanded='false'>
         <input
           type='radio'
-          name='answer-` + question_node_next.code + `''
+          name='answer-` +
+          question_node_next.code + `-` + question_node_next.id + `'
           value='Nein'>
           Nein
         </input>
@@ -62,10 +85,22 @@ var unfold_tree = function() {
 
   var build_input_question = function(question_node, question_node_next){
 
+    var questions_next_div_id = question_node_next.next.id;
+    if (questions_next_div_id === undefined) {
+      questions_next_div_id = "acquisition";
+    }
+
     $('#node-'+(question_node.id).toString())
     .append("<div id='node-"+ question_node_next.id +
-    "' class='" + question_node_next.collapse_id + " collapse'>" +
-    `<hr>
+    "' class='" + question_node_next.collapse_id + " collapse question-input'>" +
+    `
+    <label for='answer-code-` + question_node_next.id + `' class='d-none'>
+      answer-` + question_node_next.code + `
+    </label>
+    <label for='next-id-` + question_node_next.id + `' class='d-none'>
+      ` + questions_next_div_id + `
+    </label>
+    <hr>
     <h5 class="d-block">` +
     question_node_next.question +
     `</h5>
@@ -74,7 +109,8 @@ var unfold_tree = function() {
         class="form-control"
         type="text"
         placeholder=` + question_node_next.placeholder + `
-        name="answer-` + question_node_next.code + `">
+        name="answer-` + question_node_next.code + `-` +
+        question_node_next.id + `">
       </input>
     </div>
     `
@@ -86,10 +122,22 @@ var unfold_tree = function() {
 
     options_id_counter += 1;
 
+    var questions_next_div_id = question_node_next.next.id;
+    if (questions_next_div_id === undefined) {
+      var questions_next_div_id = "acquisition";
+    }
+
+
     $('#node-'+(question_node.id).toString())
     .append("<div id='node-"+ question_node_next.id +
-    "' class='" + question_node_next.collapse_id + " collapse'>" +
+    "' class='" + question_node_next.collapse_id + " collapse question-options'>" +
     `
+    <label for='answer-code-` + question_node_next.id + `' class='d-none'>
+      answer-` + question_node_next.code + `
+    </label>
+    <label for='next-id-` + question_node_next.id + `' class='d-none'>
+      ` + questions_next_div_id + `
+    </label>
     <hr>
     <h5 class="d-block">` +
     question_node_next.question +
@@ -109,7 +157,8 @@ var unfold_tree = function() {
       .append(
         `<input
           type="radio"
-          name="answer-` + question_node_next.code + `"
+          name="answer-` + question_node_next.code +
+          `-` + question_node_next.id + `"
           value="` + option + `"> `+ option + `<br>`
       );
     }

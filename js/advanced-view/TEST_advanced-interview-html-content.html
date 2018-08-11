@@ -1,0 +1,551 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raucher Evaluation</title>
+  <link rel="icon" sizes="28x28" href="/static/media/icons/insel_icon.png?v=56fff996fcc0e0413aae1c66fc3577ab">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/static/css/advanced-view/disabled-switch.css?v=63181a167a26b4d47631cb29891be1ac">
+  <!--
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap/bootstrap.min.css?v=ec3bb52a00e176a7181d454dffaea219">
+  <script src="/static/js/jquery/jquery.js?v=5b5a269bd363e0886c17d855c2aab241"></script>
+  <script src="/static/js/bootstrap/bootstrap.min.js?v=5869c96cc8f19086aee625d670d741f9"></script>
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap/bootstrap.min.css?v=ec3bb52a00e176a7181d454dffaea219">
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap/bootstrap-theme.min.css?v=ab6b02efeaf178e0247b9504051472fb">
+  <link rel="stylesheet" type="text/css" href="/static/css/issue_manager/general.css?v=db546f9b7adc0259e7f6d5e16b1c7582">
+  <link rel="stylesheet" type="text/css" href="/static/css/issue_manager/jumbotron-styles.css?v=a088a2c9625a4c9393f528a06cb761d1">
+-->
+</head>
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-between bg-primary">
+      <a class="navbar-brand text-white-50" href="/home">
+        Raucher Evaluation
+        <!--
+        <img
+        src=/static/media/imgs/header_smoke.png?v=1af169184bf291f52f490581c62f6573
+        width="200"
+        height="30"
+        class="d-inline-block align-center"
+        alt="header_smoke">
+      </img>
+    -->
+  </a>
+  <!--
+  <div>
+  <a class="nav-link dropdown-toggle text-white-50"
+  id="switch-theme"
+  aria-haspopup="true"
+  aria-expanded="false"
+  data-toggle="dropdown">
+  Theme
+</a>
+<div class="dropdown-menu" aria-labelledby="switch-theme">
+<a class="dropdown-item" href="#">Hell</a>
+<a class="dropdown-item" href="#">Dunkel</a>
+</div>
+</div>
+-->
+<a>
+  <img id="switch-theme" class="m-1 border border-secondary rounded" src="/static/media/icons/theme_icon.png?v=789ffda12523196c039749b13ec3742b" alt="smoke-img" width="20" height="20">
+
+</a>
+</nav>
+</header>
+<div class="container-fluid">
+
+  <div class="row justify-content-center">
+    <div class="col-7 m-5 p-5 border border-primary rounded bg-light">
+      <section class="mb-2">
+        <h3>Formular Raucher Evaluation</h3>
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          Beantworten Sie die Fragen in der Sektion unterhalb.<br>
+          Abhängig von ihren Anworten werden weitere Fragen
+          angezeigt.<br>
+          Wenn Sie alle Fragen beantwortet haben, drücken Sie auf
+          den Abschliessen-Button ganz unten.<br>
+          Sollten Sie einen Fehler machen, können Sie jederzeit Ihre
+          Antworten korrigieren.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+      </section>
+      <form id="advanced-interview-form" action="advanced-interview" method="post">
+        <div id="node-root" class="mb-2">
+          <div id="node-3bb05dac-bf9b-4126-bc79-471243ead59c" class="0  question-binary"><hr><h5 class="d-block" mb-2="">Sind Sie aktuell Raucher?</h5>
+            <label for="answer-code" class="d-none">
+              answer-3
+            </label>
+            <div id="button-group-3" class="btn-group btn-group-toggle mb-2" role="group" aria-label="group-3" data-toggle="buttons">
+
+              <label id="yes-3bb05dac-bf9b-4126-bc79-471243ead59c" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".6522" aria-expanded="false">
+                <input name="answer-3" value="Ja" type="radio">
+                Ja
+
+              </label>
+
+              <label id="no-3bb05dac-bf9b-4126-bc79-471243ead59c" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".8056" aria-expanded="false">
+                <input name="answer-3" value="Nein" type="radio">
+                Nein
+
+              </label>
+            </div><div id="node-03341b83-5ef7-4889-9ecd-a6039a75f5c6" class="6522 collapse question-binary"><hr><h5 class="d-block" mb-2="">Rauchen Sie Zigaretten?</h5>
+              <label for="answer-code" class="d-none">
+                answer-4
+              </label>
+              <div id="button-group-4" class="btn-group btn-group-toggle mb-2" role="group" aria-label="group-4" data-toggle="buttons">
+
+                <label id="yes-03341b83-5ef7-4889-9ecd-a6039a75f5c6" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".11932" aria-expanded="false">
+                  <input name="answer-4" value="Ja" type="radio">
+                  Ja
+
+                </label>
+
+                <label id="no-03341b83-5ef7-4889-9ecd-a6039a75f5c6" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".15096" aria-expanded="false">
+                  <input name="answer-4" value="Nein" type="radio">
+                  Nein
+
+                </label>
+              </div><div id="node-7b46312c-60a4-4744-b2a3-ce1849e0c7f3" class="11932 collapse question-input"><hr>
+                <h5 class="d-block">Wie viel rauchen Sie aktuell im Durchschnitt?</h5>
+                <div class="input-group mb-2">
+                  <input class="form-control" placeholder="Zigaretten/Tag" name="answer-5" type="text">
+
+                </div>
+                <div id="node-8e3db707-bbdc-4f94-ba06-a112ab2474f8" class="11932 collapse question-input"><hr>
+                  <h5 class="d-block">Wie alt waren Sie als Sie mit Rauchen angefangen haben?</h5>
+                  <div class="input-group mb-2">
+                    <input class="form-control" placeholder="Jahre" name="answer-6" type="text">
+
+                  </div>
+                  <div id="node-d9427101-190a-4b9b-a384-6c5fa171fae8" class="11932 collapse question-input"><hr>
+                    <h5 class="d-block">Im Durchschnitt, wie viel haben Sie geraucht?</h5>
+                    <div class="input-group mb-2">
+                      <input class="form-control" placeholder="Pu00e4ckli/Jahr" name="answer-7" type="text">
+
+                    </div>
+                  </div></div></div><div id="node-bf8086a5-e397-41b6-b595-0c33b388bddc" class="15096 collapse question-options">
+                    <hr>
+                    <h5 class="d-block">Was rauchen Sie alternativ?</h5>
+                    <div id="radio-container-1-50" class="mb-2 radio-container">
+                      <input name="answer-50" value="Pfeife" type="radio"> Pfeife<br><input name="answer-50" value="Zigarre" type="radio"> Zigarre<br><input name="answer-50" value="E-Zigarette" type="radio"> E-Zigarette<br></div><div id="node-6d8b17d5-1e73-4c0c-83c4-5d64ba33ce2c" class="15096 collapse question-options">
+                        <hr>
+                        <h5 class="d-block">Wie häufig rauchen Sie?</h5>
+                        <div id="radio-container-2-51" class="mb-2 radio-container">
+                          <input name="answer-51" value="Täglich" type="radio"> Täglich<br><input name="answer-51" value="Wöchentlich" type="radio"> Wöchentlich<br><input name="answer-51" value="Monatlich" type="radio"> Monatlich<br></div><div id="node-72212886-44e4-415b-9177-5b8f1092a902" class="15096 collapse question-input"><hr>
+                            <h5 class="d-block">Wie alt waren Sie als Sie mit Rauchen angefangen haben?</h5>
+                            <div class="input-group mb-2">
+                              <input class="form-control" placeholder="Jahre" name="answer-52" type="text">
+
+                            </div>
+                            <div id="node-6ba7b460-6e8d-41d8-a59e-3ea7cdc388b5" class="15096 collapse question-binary"><hr><h5 class="d-block" mb-2="">Haben Sie früher Zigaretten geraucht?</h5>
+                              <label for="answer-code" class="d-none">
+                                answer-53
+                              </label>
+                              <div id="button-group-53" class="btn-group btn-group-toggle mb-2" role="group" aria-label="group-53" data-toggle="buttons">
+
+                                <label id="yes-6ba7b460-6e8d-41d8-a59e-3ea7cdc388b5" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".18115" aria-expanded="false">
+                                  <input name="answer-53" value="Ja" type="radio">
+                                  Ja
+
+                                </label>
+
+                                <label id="no-6ba7b460-6e8d-41d8-a59e-3ea7cdc388b5" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".20242" aria-expanded="false">
+                                  <input name="answer-53" value="Nein" type="radio">
+                                  Nein
+
+                                </label>
+                              </div><div id="node-017d1c6d-c941-4a30-bd72-e199b2b9b810" class="18115 collapse question-input"><hr>
+                                <h5 class="d-block">Wie lange haben Sie geraucht?</h5>
+                                <div class="input-group mb-2">
+                                  <input class="form-control" placeholder="Jahre" name="answer-101" type="text">
+
+                                </div>
+                                <div id="node-6a876492-2d09-47ac-9485-0cbd15a26220" class="18115 collapse question-input"><hr>
+                                  <h5 class="d-block">Wie viel haben Sie im Durchschnitt geraucht?</h5>
+                                  <div class="input-group mb-2">
+                                    <input class="form-control" placeholder="Päckli/Tag" name="answer-102" type="text">
+
+                                  </div>
+                                  <div id="node-f34dccb9-b655-44be-ae20-1936d316df0f" class="18115 collapse question-options">
+                                    <hr>
+                                    <h5 class="d-block">Vor wie vielen 'Zeitraum' haben Sie aufgehört?</h5>
+                                    <div id="radio-container-3-103" class="mb-2 radio-container">
+                                      <input name="answer-103" value="Woche" type="radio"> Woche<br><input name="answer-103" value="Monate" type="radio"> Monate<br><input name="answer-103" value="Jahre" type="radio"> Jahre<br></div><div id="node-3d829797-65aa-4356-a280-06ee5317a0ae" class="18115 collapse question-binary"><hr><h5 class="d-block" mb-2="">Sind Sie Passivraucher?</h5>
+                                        <label for="answer-code" class="d-none">
+                                          answer-200
+                                        </label>
+                                        <div id="button-group-200" class="btn-group btn-group-toggle mb-2" role="group" aria-label="group-200" data-toggle="buttons">
+
+                                          <label id="yes-3d829797-65aa-4356-a280-06ee5317a0ae" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".19079" aria-expanded="false">
+                                            <input name="answer-200" value="Ja" type="radio">
+                                            Ja
+
+                                          </label>
+
+                                          <label id="no-3d829797-65aa-4356-a280-06ee5317a0ae" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".undefined" aria-expanded="false">
+                                            <input name="answer-200" value="Nein" type="radio">
+                                            Nein
+
+                                          </label>
+                                        </div><div id="node-7db45874-6d88-4269-96f9-2b03a105b281" class="19079 collapse question-options">
+                                          <hr>
+                                          <h5 class="d-block">Wie häufig?</h5>
+                                          <div id="radio-container-4-201" class="mb-2 radio-container">
+                                            <input name="answer-201" value="Täglich" type="radio"> Täglich<br><input name="answer-201" value="Wöchentlich" type="radio"> Wöchentlich<br><input name="answer-201" value="Weniger als 1x pro Woche" type="radio"> Weniger als 1x pro Woche<br></div></div></div></div></div></div><div id="node-770a5af2-4f61-4885-8b1e-1a436e7fb5b6" class="20242 collapse question-binary"><hr><h5 class="d-block" mb-2="">Sind Sie Passivraucher?</h5>
+                                              <label for="answer-code" class="d-none">
+                                                answer-200
+                                              </label>
+                                              <div id="button-group-200" class="btn-group btn-group-toggle mb-2" role="group" aria-label="group-200" data-toggle="buttons">
+
+                                                <label id="yes-770a5af2-4f61-4885-8b1e-1a436e7fb5b6" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".22741" aria-expanded="false">
+                                                  <input name="answer-200" value="Ja" type="radio">
+                                                  Ja
+
+                                                </label>
+
+                                                <label id="no-770a5af2-4f61-4885-8b1e-1a436e7fb5b6" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".undefined" aria-expanded="false">
+                                                  <input name="answer-200" value="Nein" type="radio">
+                                                  Nein
+
+                                                </label>
+                                              </div><div id="node-a7e631fa-8333-4bb1-bab1-5a5b28c7f15d" class="22741 collapse question-options">
+                                                <hr>
+                                                <h5 class="d-block">Wie häufig?</h5>
+                                                <div id="radio-container-5-201" class="mb-2 radio-container">
+                                                  <input name="answer-201" value="Täglich" type="radio"> Täglich<br><input name="answer-201" value="Wöchentlich" type="radio"> Wöchentlich<br><input name="answer-201" value="Weniger als 1x pro Woche" type="radio"> Weniger als 1x pro Woche<br></div></div></div></div></div></div></div></div><div id="node-ebcafd76-9933-4937-809d-a1a55106f5ab" class="8056 collapse question-binary"><hr><h5 class="d-block" mb-2="">Haben Sie früher geraucht?</h5>
+                                                    <label for="answer-code" class="d-none">
+                                                      answer-100
+                                                    </label>
+                                                    <div id="button-group-100" class="btn-group btn-group-toggle mb-2" role="group" aria-label="group-100" data-toggle="buttons">
+
+                                                      <label id="yes-ebcafd76-9933-4937-809d-a1a55106f5ab" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".13887" aria-expanded="false">
+                                                        <input name="answer-100" value="Ja" type="radio">
+                                                        Ja
+
+                                                      </label>
+
+                                                      <label id="no-ebcafd76-9933-4937-809d-a1a55106f5ab" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".14199" aria-expanded="false">
+                                                        <input name="answer-100" value="Nein" type="radio">
+                                                        Nein
+
+                                                      </label>
+                                                    </div><div id="node-c3fb1402-28ab-4772-8c34-90eb1abc60db" class="13887 collapse question-input"><hr>
+                                                      <h5 class="d-block">Wie lange haben Sie geraucht?</h5>
+                                                      <div class="input-group mb-2">
+                                                        <input class="form-control" placeholder="Jahre" name="answer-101" type="text">
+
+                                                      </div>
+                                                      <div id="node-b57c7ea0-fbbc-412e-b38e-be8fe24c3939" class="13887 collapse question-input"><hr>
+                                                        <h5 class="d-block">Wie viel haben Sie im Durchschnitt geraucht?</h5>
+                                                        <div class="input-group mb-2">
+                                                          <input class="form-control" placeholder="Päckli/Tag" name="answer-102" type="text">
+
+                                                        </div>
+                                                        <div id="node-68715c2b-8836-461e-b4d4-703c6ea220dd" class="13887 collapse question-options">
+                                                          <hr>
+                                                          <h5 class="d-block">Vor wie vielen 'Zeitraum' haben Sie aufgehört?</h5>
+                                                          <div id="radio-container-6-103" class="mb-2 radio-container">
+                                                            <input name="answer-103" value="Woche" type="radio"> Woche<br><input name="answer-103" value="Monate" type="radio"> Monate<br><input name="answer-103" value="Jahre" type="radio"> Jahre<br></div><div id="node-c34637a4-97c5-4162-9a52-5568c173dc1c" class="13887 collapse question-binary"><hr><h5 class="d-block" mb-2="">Sind Sie Passivraucher?</h5>
+                                                              <label for="answer-code" class="d-none">
+                                                                answer-200
+                                                              </label>
+                                                              <div id="button-group-200" class="btn-group btn-group-toggle mb-2" role="group" aria-label="group-200" data-toggle="buttons">
+
+                                                                <label id="yes-c34637a4-97c5-4162-9a52-5568c173dc1c" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".16703" aria-expanded="false">
+                                                                  <input name="answer-200" value="Ja" type="radio">
+                                                                  Ja
+
+                                                                </label>
+
+                                                                <label id="no-c34637a4-97c5-4162-9a52-5568c173dc1c" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".undefined" aria-expanded="false">
+                                                                  <input name="answer-200" value="Nein" type="radio">
+                                                                  Nein
+
+                                                                </label>
+                                                              </div><div id="node-1ece89c8-a8ec-434b-a57b-b8eb8ea82974" class="16703 collapse question-options">
+                                                                <hr>
+                                                                <h5 class="d-block">Wie häufig?</h5>
+                                                                <div id="radio-container-7-201" class="mb-2 radio-container">
+                                                                  <input name="answer-201" value="Täglich" type="radio"> Täglich<br><input name="answer-201" value="Wöchentlich" type="radio"> Wöchentlich<br><input name="answer-201" value="Weniger als 1x pro Woche" type="radio"> Weniger als 1x pro Woche<br></div></div></div></div></div></div><div id="node-ee2a0bfd-bb3d-4fae-b01a-56fcce6726e4" class="14199 collapse question-binary"><hr><h5 class="d-block" mb-2="">Sind Sie Passivraucher?</h5>
+                                                                    <label for="answer-code" class="d-none">
+                                                                      answer-200
+                                                                    </label>
+                                                                    <div id="button-group-200" class="btn-group btn-group-toggle mb-2" role="group" aria-label="group-200" data-toggle="buttons">
+
+                                                                      <label id="yes-ee2a0bfd-bb3d-4fae-b01a-56fcce6726e4" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".21481" aria-expanded="false">
+                                                                        <input name="answer-200" value="Ja" type="radio">
+                                                                        Ja
+
+                                                                      </label>
+
+                                                                      <label id="no-ee2a0bfd-bb3d-4fae-b01a-56fcce6726e4" class="btn btn-outline-primary btn-group-binary" role="button" data-toggle="collapse" data-target=".undefined" aria-expanded="false">
+                                                                        <input name="answer-200" value="Nein" type="radio">
+                                                                        Nein
+
+                                                                      </label>
+                                                                    </div><div id="node-fd81c9dc-41c8-435f-981b-7afad0e77e62" class="21481 collapse question-options">
+                                                                      <hr>
+                                                                      <h5 class="d-block">Wie häufig?</h5>
+                                                                      <div id="radio-container-8-201" class="mb-2 radio-container">
+                                                                        <input name="answer-201" value="Täglich" type="radio"> Täglich<br><input name="answer-201" value="Wöchentlich" type="radio"> Wöchentlich<br><input name="answer-201" value="Weniger als 1x pro Woche" type="radio"> Weniger als 1x pro Woche<br></div></div></div></div></div></div>
+                                                                        <hr>
+                                                                        <input id="advanced-interview-post-button" class="btn btn-outline-primary mb-2" name="button" value="Abschliessen" type="submit">
+
+                                                                      </form>
+                                                                    </div><!-- col-9 -->
+                                                                  </div><!-- row -->
+                                                                  <!-- TODO this could be done by REST controller
+                                                                  and ajax instead of loading into html -->
+
+                                                                  <div id="content-container" class="d-none">
+                                                                    {
+                                                                      "id": "root",
+                                                                      "code": "root",
+                                                                      "question_type": "question-input",
+                                                                      "next": {
+                                                                        "code": "3",
+                                                                        "question": "Sind Sie aktuell Raucher?",
+                                                                        "next_yes": {
+                                                                          "code": "4",
+                                                                          "question": "Rauchen Sie Zigaretten?",
+                                                                          "next_yes": {
+                                                                            "code": "5",
+                                                                            "question": "Wie viel rauchen Sie aktuell im Durchschnitt?",
+                                                                            "placeholder": "Zigaretten/Tag",
+                                                                            "next": {
+                                                                              "code": "6",
+                                                                              "question": "Wie alt waren Sie als Sie mit Rauchen angefangen haben?",
+                                                                              "placeholder": "Jahre",
+                                                                              "next": {
+                                                                                "code": "7",
+                                                                                "question": "Im Durchschnitt, wie viel haben Sie geraucht?",
+                                                                                "placeholder": "P\u00e4ckli/Jahr",
+                                                                                "next": "/acquisition",
+                                                                                "id": "d9427101-190a-4b9b-a384-6c5fa171fae8",
+                                                                                "collapse_id": 11932,
+                                                                                "question_type": "question-input"
+                                                                              },
+                                                                              "id": "8e3db707-bbdc-4f94-ba06-a112ab2474f8",
+                                                                              "question_type": "question-input",
+                                                                              "collapse_id": 11932
+                                                                            },
+                                                                            "id": "7b46312c-60a4-4744-b2a3-ce1849e0c7f3",
+                                                                            "question_type": "question-input",
+                                                                            "collapse_id": 11932
+                                                                          },
+                                                                          "next_no": {
+                                                                            "code": "50",
+                                                                            "question": "Was rauchen Sie alternativ?",
+                                                                            "options": [
+                                                                            "Pfeife",
+                                                                            "Zigarre",
+                                                                            "E-Zigarette"
+                                                                            ],
+                                                                            "next": {
+                                                                              "code": "51",
+                                                                              "question": "Wie h\u00e4ufig rauchen Sie?",
+                                                                              "options": [
+                                                                              "T\u00e4glich",
+                                                                              "W\u00f6chentlich",
+                                                                              "Monatlich"
+                                                                              ],
+                                                                              "next": {
+                                                                                "code": "52",
+                                                                                "question": "Wie alt waren Sie als Sie mit Rauchen angefangen haben?",
+                                                                                "placeholder": "Jahre",
+                                                                                "next": {
+                                                                                  "code": "53",
+                                                                                  "question": "Haben Sie fr\u00fcher Zigaretten geraucht?",
+                                                                                  "next_yes": {
+                                                                                    "code": "101",
+                                                                                    "question": "Wie lange haben Sie geraucht?",
+                                                                                    "placeholder": "Jahre",
+                                                                                    "next": {
+                                                                                      "code": "102",
+                                                                                      "question": "Wie viel haben Sie im Durchschnitt geraucht?",
+                                                                                      "placeholder": "P\u00e4ckli/Tag",
+                                                                                      "next": {
+                                                                                        "code": "103",
+                                                                                        "question": "Vor wie vielen 'Zeitraum' haben Sie aufgeh\u00f6rt?",
+                                                                                        "options": [
+                                                                                        "Woche",
+                                                                                        "Monate",
+                                                                                        "Jahre"
+                                                                                        ],
+                                                                                        "next": {
+                                                                                          "code": "200",
+                                                                                          "question": "Sind Sie Passivraucher?",
+                                                                                          "next_yes": {
+                                                                                            "code": "201",
+                                                                                            "question": "Wie h\u00e4ufig?",
+                                                                                            "options": [
+                                                                                            "T\u00e4glich",
+                                                                                            "W\u00f6chentlich",
+                                                                                            "Weniger als 1x pro Woche"
+                                                                                            ],
+                                                                                            "next": "/acquisition",
+                                                                                            "id": "7db45874-6d88-4269-96f9-2b03a105b281",
+                                                                                            "collapse_id": 19079,
+                                                                                            "question_type": "question-options"
+                                                                                          },
+                                                                                          "next_no": "/acquisition",
+                                                                                          "id": "3d829797-65aa-4356-a280-06ee5317a0ae",
+                                                                                          "question_type": "question-binary",
+                                                                                          "collapse_id": 18115
+                                                                                        },
+                                                                                        "id": "f34dccb9-b655-44be-ae20-1936d316df0f",
+                                                                                        "question_type": "question-options",
+                                                                                        "collapse_id": 18115
+                                                                                      },
+                                                                                      "id": "6a876492-2d09-47ac-9485-0cbd15a26220",
+                                                                                      "question_type": "question-input",
+                                                                                      "collapse_id": 18115
+                                                                                    },
+                                                                                    "id": "017d1c6d-c941-4a30-bd72-e199b2b9b810",
+                                                                                    "question_type": "question-input",
+                                                                                    "collapse_id": 18115
+                                                                                  },
+                                                                                  "next_no": {
+                                                                                    "code": "200",
+                                                                                    "question": "Sind Sie Passivraucher?",
+                                                                                    "next_yes": {
+                                                                                      "code": "201",
+                                                                                      "question": "Wie h\u00e4ufig?",
+                                                                                      "options": [
+                                                                                      "T\u00e4glich",
+                                                                                      "W\u00f6chentlich",
+                                                                                      "Weniger als 1x pro Woche"
+                                                                                      ],
+                                                                                      "next": "/acquisition",
+                                                                                      "id": "a7e631fa-8333-4bb1-bab1-5a5b28c7f15d",
+                                                                                      "collapse_id": 22741,
+                                                                                      "question_type": "question-options"
+                                                                                    },
+                                                                                    "next_no": "/acquisition",
+                                                                                    "id": "770a5af2-4f61-4885-8b1e-1a436e7fb5b6",
+                                                                                    "question_type": "question-binary",
+                                                                                    "collapse_id": 20242
+                                                                                  },
+                                                                                  "id": "6ba7b460-6e8d-41d8-a59e-3ea7cdc388b5",
+                                                                                  "question_type": "question-binary",
+                                                                                  "collapse_id": 15096
+                                                                                },
+                                                                                "id": "72212886-44e4-415b-9177-5b8f1092a902",
+                                                                                "question_type": "question-input",
+                                                                                "collapse_id": 15096
+                                                                              },
+                                                                              "id": "6d8b17d5-1e73-4c0c-83c4-5d64ba33ce2c",
+                                                                              "question_type": "question-options",
+                                                                              "collapse_id": 15096
+                                                                            },
+                                                                            "id": "bf8086a5-e397-41b6-b595-0c33b388bddc",
+                                                                            "question_type": "question-options",
+                                                                            "collapse_id": 15096
+                                                                          },
+                                                                          "id": "03341b83-5ef7-4889-9ecd-a6039a75f5c6",
+                                                                          "question_type": "question-binary",
+                                                                          "collapse_id": 6522
+                                                                        },
+                                                                        "next_no": {
+                                                                          "code": "100",
+                                                                          "question": "Haben Sie fr\u00fcher geraucht?",
+                                                                          "next_yes": {
+                                                                            "code": "101",
+                                                                            "question": "Wie lange haben Sie geraucht?",
+                                                                            "placeholder": "Jahre",
+                                                                            "next": {
+                                                                              "code": "102",
+                                                                              "question": "Wie viel haben Sie im Durchschnitt geraucht?",
+                                                                              "placeholder": "P\u00e4ckli/Tag",
+                                                                              "next": {
+                                                                                "code": "103",
+                                                                                "question": "Vor wie vielen 'Zeitraum' haben Sie aufgeh\u00f6rt?",
+                                                                                "options": [
+                                                                                "Woche",
+                                                                                "Monate",
+                                                                                "Jahre"
+                                                                                ],
+                                                                                "next": {
+                                                                                  "code": "200",
+                                                                                  "question": "Sind Sie Passivraucher?",
+                                                                                  "next_yes": {
+                                                                                    "code": "201",
+                                                                                    "question": "Wie h\u00e4ufig?",
+                                                                                    "options": [
+                                                                                    "T\u00e4glich",
+                                                                                    "W\u00f6chentlich",
+                                                                                    "Weniger als 1x pro Woche"
+                                                                                    ],
+                                                                                    "next": "/acquisition",
+                                                                                    "id": "1ece89c8-a8ec-434b-a57b-b8eb8ea82974",
+                                                                                    "collapse_id": 16703,
+                                                                                    "question_type": "question-options"
+                                                                                  },
+                                                                                  "next_no": "/acquisition",
+                                                                                  "id": "c34637a4-97c5-4162-9a52-5568c173dc1c",
+                                                                                  "question_type": "question-binary",
+                                                                                  "collapse_id": 13887
+                                                                                },
+                                                                                "id": "68715c2b-8836-461e-b4d4-703c6ea220dd",
+                                                                                "question_type": "question-options",
+                                                                                "collapse_id": 13887
+                                                                              },
+                                                                              "id": "b57c7ea0-fbbc-412e-b38e-be8fe24c3939",
+                                                                              "question_type": "question-input",
+                                                                              "collapse_id": 13887
+                                                                            },
+                                                                            "id": "c3fb1402-28ab-4772-8c34-90eb1abc60db",
+                                                                            "question_type": "question-input",
+                                                                            "collapse_id": 13887
+                                                                          },
+                                                                          "next_no": {
+                                                                            "code": "200",
+                                                                            "question": "Sind Sie Passivraucher?",
+                                                                            "next_yes": {
+                                                                              "code": "201",
+                                                                              "question": "Wie h\u00e4ufig?",
+                                                                              "options": [
+                                                                              "T\u00e4glich",
+                                                                              "W\u00f6chentlich",
+                                                                              "Weniger als 1x pro Woche"
+                                                                              ],
+                                                                              "next": "/acquisition",
+                                                                              "id": "fd81c9dc-41c8-435f-981b-7afad0e77e62",
+                                                                              "collapse_id": 21481,
+                                                                              "question_type": "question-options"
+                                                                            },
+                                                                            "next_no": "/acquisition",
+                                                                            "id": "ee2a0bfd-bb3d-4fae-b01a-56fcce6726e4",
+                                                                            "question_type": "question-binary",
+                                                                            "collapse_id": 14199
+                                                                          },
+                                                                          "id": "ebcafd76-9933-4937-809d-a1a55106f5ab",
+                                                                          "question_type": "question-binary",
+                                                                          "collapse_id": 8056
+                                                                        },
+                                                                        "id": "3bb05dac-bf9b-4126-bc79-471243ead59c",
+                                                                        "question_type": "question-binary",
+                                                                        "collapse_id": 0
+                                                                      }
+                                                                    }
+                                                                  </div>
+                                                                  <!-- footer -->
+                                                                </div><!-- container-fluid -->
+                                                                <footer>
+                                                                </footer>
+                                                                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                                                                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                                                                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+                                                                <script type="text/javascript" src="/static/js/theme/switch-theme.js?v=7225be3c808fae75993390c16b6ab336"></script>
+                                                                <script type="text/javascript" src="/static/js/advanced-view/unfold-tree.js?v=77e6dbce72e2f050b65a09fbd881afbe">
+                                                                </script>
+                                                                <script type="text/javascript" src="/static/js/advanced-view/add-switch-to-binary-questions.js?v=31d0b8baa5ccd3cf6a23fb34fa2c13d5">
+                                                                </script>
+                                                                <script type="text/javascript" src="/static/js/advanced-view/clean-answer-tree.js?v=a991d2097522f169f668b6aa5b2e65f3">
+                                                                </script>
+                                                                <script type="text/javascript" src="/static/js/advanced-view/on-document-ready.js?v=586a66e80cc22211d90fa7096698f27e">
+                                                                </script>
+
+
+                                                              </body>
