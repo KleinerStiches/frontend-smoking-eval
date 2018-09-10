@@ -1,10 +1,10 @@
 
 var add_answer_clean_up_to_submit_button = function(){
 
-  $("#advanced-interview-post-button").on("click", function(){
+  // mark all input with not-active-answer
+  $("input:not(#advanced-interview-post-button)").addClass("not-active-answer");
 
-    // mark all input with not-active-answer
-    $("input:not(#advanced-interview-post-button)").addClass("not-active-answer");
+  $("#advanced-interview-post-button").on("click", function(){
 
     // bubble down the answer tree and all inuts found remove the class
     var first_question = $("#node-root > div")[0];
