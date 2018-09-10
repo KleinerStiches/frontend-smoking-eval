@@ -13,6 +13,9 @@ var add_answer_clean_up_to_submit_button = function(){
     // all input with class not-active-answer remove value and checked
     $("input.not-active-answer").val("").attr("checked", false);
 
+    // attach the required attribute to all answers in the active question branch
+    attach_required_to_answers();
+
   });
 
 }
