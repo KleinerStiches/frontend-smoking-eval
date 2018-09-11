@@ -1,10 +1,18 @@
 @TODO
+escaping frm question 53 only this question ä is escaped for whatever reason
+check if can make a single escaping on input if not utf8 then escape
+
+@TODO
+go back to advanced interview when go back from a question in the summary
+and came from the advanced interview
+
+@TODO
 instead of in the python script
 when press on "Absenden"
 with js go through the branch
 and every input that is in the branch mark with a extra class
 then after marking take all inputs of the form that HAVE NOT that class
-and remove their answers by value="" and removeAttr checked  
+and remove their answers by value="" and removeAttr checked
 
 @TODO
 when answered the questions by form then do no show the single question to
