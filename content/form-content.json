@@ -28,7 +28,7 @@
     {
       "code": "7",
       "question": "Im Durchschnitt, wie viel haben Sie geraucht?",
-      "placeholder": "Päckli/Jahr",
+      "placeholder": "P\\u00e4ckli/Jahr",
       "next": "/acquisition"
     },
     {
